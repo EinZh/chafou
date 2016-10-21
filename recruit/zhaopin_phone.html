@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<link href="http://cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.css" rel="stylesheet">
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.section1 img{
+			    width: 20%;
+			    margin-left: 40%;
+			    margin-top: 20%;
+		}
+		.section1 h2{
+			text-align: center;
+			font-style: 25px;
+			opacity: 0;
+		}
+		.logo_small{
+			position: absolute;
+			top: 5%;
+			left: 10%;
+			width: 10%;
+			opacity: 0;
+			margin-left: -20%;
+			transform: rotate(-45deg);
+			-ms-transform:rotate(-45deg);
+			-moz-transform:rotate(-45deg); 
+			-webkit-transform:rotate(-45deg); 
+			-o-transform:rotate(-45deg); 
+    		transform-origin: left bottom;
+    		-ms-transform-origin: left bottom;
+    		-moz-transform-origin: left bottom;
+    		-webkit-transform-origin: left bottom;
+    		-o-transform-origin: left bottom;
+		}
+		.section3{
+			padding: 10%;
+		}
+		.section3 h3{
+			    font-size: 100px;
+			    color: #ccc;
+			    text-align: center;
+			    opacity: 0;
+		}
+		.zp_post{
+			margin-left: -200%;
+			margin-top: 15%;
+			line-height: 2;
+    		font-size: 30px;
+		}
+		.zp_post p{
+			padding: 1%;
+		}
+		.section4 .erweima{
+			    position: absolute;
+			    top: 15%;
+			    left: 45%;
+		}
+		.erweima{
+			 width: 100px;
+			 opacity: 0;
+		}
+		.place img,.mail img{
+			width: 200px;
+		}
+		.place,.mail{
+			    position: absolute;
+			    left: -50%;
+		}
+		.place{
+			top: 40%;
+		}
+		.mail{
+			top: 60%;
+		}
+		.place p,.mail p{
+			    float: right;
+			    font-size: 37px;
+		}
+		.place p{
+			margin-top: 20%;
+		}
+		.mail p{
+			margin-top: 10%;
+		}
+	</style>
+</head>
+<body>
+	<div id="fullpage">
+	    <div class="section section1">
+	    	<img data-src="logo.png">
+	    	<h2>COLOR YOUR LIFE</h2>
+	    </div>
+	    <div class="section section2">
+	    	<img class='logo_small' data-src="logo.png">
+			<div class="about_time"></div>
+			<div class="about_me"></div>
+	    </div>
+	    <div class="section section3">
+	    	<h3>招聘</h3>
+	    	<div class="zp_post">
+	    		<h2>前端开发</h2>
+	    		<p>【职位描述】</p>
+	    		<p>－－负责日常安全类内容的撰写、收集，每周需要输出多篇内容在不同平台发布。</p>
+	    		<p>－－按照相关要求，与监管部门的对接、合作，保持密切的沟通联系，建立并维护良好的合作关系。</p>
+	    		<p>－－新媒体、各类官方账号的运营、用户的精准触达。</p>
+	    		<p>职位诱惑 : 福利好 扁平化管理 弹性工作时间 团队有爱</p>
+	    		<p>【职位要求】</p>
+	    		<p>－－本科以上学历，熟悉互联网金融业务；</p>
+	    		<p>－－文字能力佳，擅长使用新媒体语言，紧跟社会热点；</p>
+	    		<p>－－多任务统筹规划能力；</p>
+	    		<p>－－有运营、媒体、安全相关工作背景优先。</p>
+	    		<p>－－会简单ps、视频剪辑等软件的优先。</p>
+	    	</div>
+	    </div>
+	    <div class="section section4">
+	    	<div>
+	    		<img class='erweima' src="logo.png">
+	    	</div>
+	    	<div class="place">
+	    		<img src="place.ico">
+	    		<p>联系地址：</p>
+	    	</div>
+	    	<div class="mail">
+	    		<img src="mail.ico">
+	    		<p>hr@chafou.com</p>
+	    	</div>
+	    </div>
+	</div>
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+	<script src="http://cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.js"></script>
+	<script src="http://cdn.bootcss.com/move.js/0.5.0/move.js"></script>
+	<script>
+		$(document).ready(function() {
+		    $('#fullpage').fullpage({
+		    	anchors:['page1', 'page2','page3','page4'],
+        		navigation: true,
+        		verticalCentered: false,
+        		afterLoad:function(link,index){
+        			switch(index){
+        				case 1:
+        					move('.section1 h2').set('opacity', 1).end();
+        					move('.section1 h2').scale(2).end();
+        					move('.section1 h2').set('margin-top', '20%').end();
+        					break;
+        				case 2:
+        					move('.logo_small').set('opacity', 1).end();
+        					move('.logo_small').set('margin-left', 0).end();
+        					move('.logo_small').rotate(0).end();
+        					break;
+        				case 3:
+        					move('.section3 h3').set('opacity', 1).end();
+        					move('.zp_post').set('margin-left', 0).end();
+        					break;
+        				case 4:
+        					move('.erweima').scale(3).end();
+        					move('.erweima').set('opacity', 1).end();
+        					move('.place').set('left', '24%').end();
+        					move('.mail').set('left', '24%').end();
+        					break;
+        				default:
+        					break;
+        			}
+        		},
+        		onLeave:function(link,index){
+        			switch(index){
+        				case 1:
+        					move('.section1 h2').set('opacity', 0).end();
+        					move('.section1 h2').scale(1).end();
+        					move('.section1 h2').set('margin-top', 0).end();
+        					break;
+        				case 2:
+        					move('.logo_small').set('opacity', 0).end();
+        					move('.logo_small').set('margin-left', '-20%').end();
+        					move('.logo_small').rotate(-45).end();
+        					break;
+        				case 3:
+        					move('.section3 h3').set('opacity', 0).end();
+        					move('.zp_post').set('margin-left', '-200%').end();
+        					break;
+        				case 4:
+        					move('.erweima').scale(1).end();
+        					move('.erweima').set('opacity', 0).end();
+        					move('.place').set('left', '-50%').end();
+        					move('.mail').set('left', '-50%').end();
+        					break;
+        				default:
+        					break;
+        			}
+        		},
+        		afterRender:function(){
+        			
+        		},
+		    });
+		});
+	</script>
+</body>
+</html>

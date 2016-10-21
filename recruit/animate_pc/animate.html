@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>I want u</title>
+	<link href="http://cdn.bootcss.com/animate.css/3.5.2/animate.css" rel="stylesheet">
+	<link href="http://cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.css" rel="stylesheet">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			list-style: none;
+			text-decoration: none;
+		}
+		.section{
+			position: relative;
+		}
+		.section1{
+			background: url(page1.jpeg) no-repeat;
+			background-size: cover;
+		}
+		#logo img{
+			width: 50px;
+			position: fixed;
+			top: 5%;
+			left: 10%;
+		}
+		#page1_h{
+			opacity: 0;
+			color: #ececec;
+			padding: 5%;
+		}
+		#info_1{
+			opacity: 0;
+			width: 960px;
+			margin: 0 auto; 
+			margin-bottom: 15px;
+			font-size: 17px;
+    		line-height: 30px;
+		}
+		.section2{
+			background: url(page3.jpeg) no-repeat;
+			background-size: cover;
+		}
+		.section3 .wrap{
+			position: relative;
+			width: 90%;
+			padding: 10%;
+			opacity: 0;
+		}
+		.section3 .post_left,.demand_right{
+			float: left;
+			width: 40%;
+			background: #fafafa;
+			padding: 2%;
+		}
+		.section3 .post_left{
+			border-right: 1px #ececec solid; 
+		}
+		.section3 .post_middle{
+			position: absolute;
+			top: 37%;
+			left: 35%;
+			background: #91cebe;
+		    border-radius: 4px;
+		    padding: 1%; 
+		}
+		.post_middle p,h3{
+			color: #fff;
+		}
+		.post_middle h3{
+			margin-top: 14%;
+		}
+		.post_nav{
+			border-left: 5px #91cebe solid; 
+			padding-left: 1%;
+		}
+		.post_nav p{
+		    text-align: left;
+		    margin-bottom: 3%;
+		    margin-left: 3%;
+    		line-height: 1.5;
+		}
+		.section4 .place,.mail{
+			margin: 0 auto;
+		}
+		.section4 .place,.mail img{
+			width: 100px;
+		}
+		@media screen and (max-width: 600px) { 
+		  .section1 {
+		    background: url(page1_small.jpeg) no-repeat;
+			background-size: cover;
+		  }
+		  .section2 {
+		    background: url(page2_small.jpg) no-repeat;
+			background-size: cover;
+		  }
+		  #info_1{
+			width: 300px;
+		  }
+		  #logo img{
+		  	width: 30px;
+		  	top: 3%;
+		  	left: 3%;
+		  }
+		}
+		@media screen and (max-width: 1000px){
+
+		}
+	</style>
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section section1">
+			<div id="logo">
+				<img src="logo.png">
+			</div>
+			<h1 id='page1_h'>COLOR YOUR LIFE</h1>
+			<p id='info_1'>借一盏茶的须臾，将人生小憩，温软的香雾在脸颊缭绕不止，温暖而贴心。<br />
+				茶，经得起反复冲泡，余味虽淡，一缕清香犹存，浅尝细品最是淡美，恰如把喝到的味道藏在心底，烦恼时，从回味中咀嚼。<br />
+				端起茶盏，轻酌一口，顿觉心旷神怡，一种温馨之感直直的扑入心田。不禁感喟：人生有这杯茶的香暖，真好。</p>
+		</div>
+		<div class="section section2">
+
+		</div>
+		<div class="section section3">
+			<div class="wrap">
+				<div class="post_left">
+					<div class="post_nav">
+						<p>职位描述</p>
+						<p>1.参与项目需求分析，按期完成指定模块功能的设计、开发、维护工作。</p>
+						<p>2.优化系统性能，保证服务质量和性能。</p>
+						<p>3.根据项目具体进度，编写各阶段对应的文档。</p>
+					</div>
+				</div>
+				<div class="demand_right">
+					<div class="post_nav">
+						<p>职位需求</p>
+						<p>1.一年以上开发经验。</p>
+						<p>2.JAVA基础扎实，理解io、多线程、集合等基础框架。</p>
+						<p>3.熟悉web编程，熟悉Spring、iBatis等开源框架。</p>
+						<p>4.熟悉常见的设计模式。</p>
+						<p>5.熟练掌握mysql/html/JavaScript/css中的某几种技术</p>
+						<p>6.具备较强的逻辑分析和归纳总结能力。</p>
+						<p>7.对技术有浓厚的兴趣，具备较强的自学能力，工作富于创造性。</p>
+						<p>8.良好的团队沟通协调能力，表达能力。</p>
+					</div>
+				</div>
+				<div class="post_middle">
+					 <p>茶否科技</p>
+					 <h3>Java</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+	<script src="http://cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.js"></script>
+	<script>
+		$(document).ready(function() {
+		    $('#fullpage').fullpage({
+		    	anchors:['page1', 'page2', 'page3', 'page4','page5'],
+		    	navigation: true,
+		    	verticalCentered: false,
+		    	loopBottom: true,
+		    	fixedElements: '#logo',
+		    	afterLoad: function(anchorLink, index){
+		    		switch(index){
+        				case 1:
+        					$('#page1_h').css('opacity',1);
+        					$('#info_1').css('opacity',1);
+        					$('#page1_h').addClass('animated zoomIn');        					
+        					$('#info_1').addClass('animated fadeInUp');
+        					break;
+        				case 2:
+        					
+        					break;
+        				case 3:
+        					$('.wrap').css('opacity',1);
+        					$('.post_left').addClass('animated fadeInLeft');
+        					$('.demand_right').addClass('animated fadeInRight');
+        					$('.post_middle').addClass('animated fadeInDownBig');
+        					break;
+        				default:
+        					break;
+        			}
+		    	},
+		    	onLeave: function(index, nextIndex){
+		    		switch(index){
+        				case 1:
+        					$('#page1_h').css('opacity',1);
+        					$('#info_1').css('opacity',1);
+        					$('#page1_h').removeClass('animated zoomIn');        					
+        					$('#info_1').removeClass('animated fadeInUp');
+        					break;
+        				case 2:
+        					
+        					break;
+        				case 3:
+        					$('.wrap').css('opacity',0);
+        					$('.post_left').removeClass('animated fadeInLeft');
+        					$('.demand_right').removeClass('animated fadeInRight');
+        					$('.post_middle').removeClass('animated fadeInDownBig');
+        					break;
+        				default:
+        					break;
+        			}
+		    	},
+		    });
+		    function resizeHeight(){
+		    	var post_left_H = $(".post_left").height();
+			    var post_right_H = $(".demand_right").height();
+			    if(post_left_H > post_right_H){
+			    	$(".demand_right").css('height',post_left_H);
+			    }else{
+			    	$(".post_left").css('height',post_right_H);
+			    }
+		    }
+		   	resizeHeight();
+		});
+	</script>
+</body>
+</html>

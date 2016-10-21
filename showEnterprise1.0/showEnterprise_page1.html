@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>showEnterprise</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    *{
+      margin: 0;
+      padding: 0;  
+    }
+    body{
+      background-color: #ededed; 
+    }
+      .navbar{
+        height: 104px;
+      }
+      .container{
+        margin: 27px auto;
+      }
+      .navbar-nav li{
+        margin-left: 10px;
+      }
+      .aboutUs{
+        height: 273px;
+        background-color: #FBFBFB;
+        padding: 20px;
+      }
+      .aboutTxt{
+        margin-top: 55px;
+        margin-left: 150px;
+      }
+      .aboutTxt h4{
+        color: #3e3a39;
+        font-size: 18px;
+        margin-bottom: 27px;
+      }
+      .aboutTxt span{
+        margin-left: 9px;
+        font-size: 13px;
+        color: #9e9e9f;
+      }
+      }
+      .aboutTxt p{
+        color: #717071;
+      }
+      .aboutTel{
+        margin-top: -110px;
+        margin-right: 150px;
+        padding-left: 180px;
+        border-left: 1px solid #9e9e9f;
+      }
+      .aboutTel h3{
+        color: #00ae41;
+        margin-bottom: 27px;
+      }
+      .aboutTel{
+        color: #9e9e9f;
+      }
+      #main{
+            height: 570px;
+            width: 100%;
+            background: url(bg6.jpeg) no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+      #showEnterprise{
+        position: relative;
+        width: 80%;
+        height: 80%;
+        left: 350px
+      }
+      #control{
+        position: absolute;
+        left: 100px;
+        bottom: 32px;
+      }
+      .arrow{
+        border: 1px #fff solid;
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+      }
+      .arrow:link {
+        text-decoration: none;
+        color: #fff;
+      }
+      .arrow:hover{
+        color: #00ae41;
+      }
+      #prev{
+        float: left;
+      }
+      #next{
+        float: right;
+        position: absolute;
+        top: 31px;
+        left: 31px;
+      }
+      .list{
+        width: 200px;
+        height: 200px;
+        border: 1px solid #fff;
+        opacity: 0;
+      	transition: opacity 1s;
+      	overflow: hidden;
+      }
+      #enterprise1{
+        position: absolute;
+        top: 57px;
+        left: 100px;
+      }
+      #enterprise2{
+        position: absolute;
+        bottom: 0; 
+        left: 299px;
+      }
+      #enterprise3{
+        position: absolute;
+        top: 57px;
+        left: 498px;
+      }
+      #enterprise4{
+        position: absolute;
+        bottom: 0;
+        left: 697px;
+      }
+      #welcomeTxt{
+        position: absolute;
+        bottom: 150px;
+        left: 130px;
+        color: #ccc;
+      }
+      #welcomeTxt h4{
+        margin-bottom: -1px;
+      }
+      #welcomeTxt p,#welcomeTxt h4{
+        border: 1px solid #fff;
+        display: inline-block;
+        padding: 4px;
+      }
+      .showE{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: #fff;
+      }
+      .showE h4{
+        margin-bottom: 5px;
+      }
+      .list img{
+      	width: 200px;
+      }
+      .hideE{
+      	width: 200px;
+      	height: 200px;
+      	padding: 20px;
+      	color: #000;
+      	background-color: #fff;
+      	position: absolute;
+	    top: -324px;
+	    left: -11px;
+	    opacity: .9;
+	    transition: top .7s;
+      }
+      .list:hover .hideE{
+      	top: -125px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">平仄</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="#allP">所有产品</a></li>
+            <li><a href="#hotP">热卖产品</a></li>
+            <li><a href="#newP">最新产品</a></li>
+            <li><a href="#about">关于我们</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- main -->
+    
+    <div class="container" id='main'>
+      <div id="welcomeTxt">
+        <h4>sometxt</h4><br />
+        <p>sometxtsometxtsometxtsometxtsometxt</p><br />
+        <p>sometxtsometxtsometxt</p>
+      </div>
+      <div id="showEnterprise">
+        <div class="list" id="enterprise1">
+        <img src="taobao.png" alt="">
+          <div class="showE">
+            <h4>01</h4>
+            <p>淘宝</p>
+            <div class="hideE">
+            	<h4>淘宝</h4>
+            	<p>这里是介绍</p>
+            </div>
+          </div>
+        </div>
+        <div class="list" id="enterprise2">
+        <img src="jingdong.png" alt="">
+          <div class="showE">
+            <h4>02</h4>
+            <p>京东</p>
+            <div class="hideE">
+            	<h4>京东</h4>
+            	<p>这里是介绍</p>
+            </div>
+          </div>
+        </div>
+        <div class="list" id="enterprise3">
+        <img src="youzan.png" alt="">
+          <div class="showE">
+            <h4>03</h4>
+            <p>有赞</p>
+            <div class="hideE">
+            	<h4>有赞</h4>
+            	<p>这里是介绍</p>
+            </div>
+          </div>
+        </div>
+        <div class="list" id="enterprise4">
+        <img src="taobao.png" alt="">
+          <div class="showE">
+            <h4>04</h4>
+            <p>淘宝</p>
+            <div class="hideE">
+            	<h4>淘宝</h4>
+            	<p>这里是介绍</p>
+            </div>
+          </div>
+        </div>
+        <div id="control">
+          <a href="showEnterprise_page3.html" class="arrow" id='prev'>&lt;</a>
+          <a href="showEnterprise_page2.html" class="arrow" id='next'>&gt;</a>
+        </div>  
+      </div>
+      
+    </div>
+    
+    <!-- info -->
+    <div class="footer">
+      <div class="aboutUs">
+        <div class="aboutTxt">
+          <h4>关于我们
+            <span>ABOUT US</span>
+          </h4>
+          <p style="line-height: 2">平仄是一个互联网茶品牌。让喝茶变得简单时尚。平仄聚集了一波才华横溢、热情四溢的多元化年轻人。<br />  
+我们也是一群热爱喝茶的年轻人，我们享受把喜爱融入到自己的产品之中。</p>
+        </div>
+        <div class="aboutTel pull-right">
+          <h3>400-9922-432</h3>
+          <p>周一至周六 9:00-18:00</p>
+        </div>
+      </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
+    <script>
+    	window.onload = function(){
+        
+    		var list = document.getElementsByClassName('list');
+    		for(var i = 0;i < list.length;i++){
+    			list[i].style.opacity = 1;
+    		}
+    	}
+    </script>
+  </body>
+</html>

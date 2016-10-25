@@ -69,7 +69,7 @@
             margin: 0;
             height: 570px;
             width: 100%;
-            background: url(showE.jpeg) no-repeat;
+            background: url(showEbg.jpeg) no-repeat;
             -webkit-background-size: cover;
             background-size: cover;
         }
@@ -77,18 +77,20 @@
         position: relative;
         width: 80%;
         height: 80%;
-        left: 380px;
+        left: 335px;
         margin-top: 30px;
       }
       #control{
         position: absolute;
-        left: 100px;
-        bottom: 32px;
+        left: 215px;
+        bottom: 35px;
+        opacity: 0;
+        transition: opacity 2s;
       }
       .arrow{
         border: 1px #fff solid;
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
         font-size: 20px;
         color: #fff;
         text-align: center;
@@ -106,97 +108,96 @@
       #next{
         float: right;
         position: absolute;
-        top: 31px;
-        left: 31px;
+        top: 35px;
+        left: 35px;
       }
       .list{
-        width: 200px;
-        height: 200px;
+        width: 221px;
+        height: 221px;
         border: 1px solid #fff;
         opacity: 0;
-        transition: opacity 1s;
         overflow: hidden;
+        transition: opacity 2s;
       }
       #enterprise1{
         position: absolute;
-        top: 57px;
+        top: 15px;
         left: 100px;
+      }
+      #enterprise1 img{
+        margin: 84px 24px;
       }
       #enterprise2{
         position: absolute;
         bottom: 0; 
-        left: 299px;
+        left: 320px;
+      }
+      #enterprise2 img{
+        margin: 88px 24px;
       }
       #enterprise3{
         position: absolute;
-        top: 57px;
-        left: 498px;
+        top: 15px;
+        left: 540px;
+      }
+      #enterprise3 img{
+        margin: 94px 24px;
       }
       #enterprise4{
         position: absolute;
         bottom: 0;
-        left: 697px;
+        left: 760px;
+      }
+      #enterprise4 p{
+        color: #fff;
+        font-size: 18px;
+        margin: 92px 0;
+        text-align: center;
       }
       #welcomeTxt{
         position: absolute;
-        bottom: 170px;
-        left: 140px;
+        bottom: 150px;
+        left: 156px;
         color: #ccc;
+        opacity: 0;
+        transition: opacity 2s;
       }
-      #welcomeTxt h4{
-        margin-bottom: -1px;
-        line-height: 28px;
-      }
-      #welcomeTxt p,#welcomeTxt h4{
+      .welcomeM,.welcomeB{
+        color: #fff;
+        height: 36px;
+        line-height: 36px;
+        text-align: left;
         border: 1px solid #fff;
-        display: inline-block;
-        padding: 5px 15px;
-        font-size: 17px;
+        padding-left: 20px;
       }
-      #welcomeTxt a{
+      #welcomeTxt .welcomeM{
+        width: 186px;
+      }
+      #welcomeTxt .welcomeB{
+        width: 480px;
+        margin-top: -1px;
+      }
+      #readmore{
+        margin-top: 20px;
+      }
+      #readmore a{
         color: #fff;
         text-decoration: none;
-      }
-      .showE{
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        color: #fff;
-      }
-      .showE h4,.showE p,.list img{
-        transition: opacity .3s;
-      }
-      .showE h4{
-        margin-bottom: 5px;
-      }
-      .showE p{
-        font-weight: bold;
-        border-bottom: 2px solid #fff;
-      }
-      .list img{
-        width: 200px;
+        margin-right: 27px;
       }
       .hideE{
-        width: 200px;
-        height: 200px;
+        width: 221px;
+        height: 221px;
         padding: 20px;
         color: #000;
         position: absolute;
       top: -201px;
       left: -1px;
-      transition: top .7s;
+      transition: all .7s;
       }
       .list:hover .hideE{
         top: 0;
-      }
-      .list:hover img{
-        opacity: .5;
-      }
-      .list:hover .showE h4{
-        opacity: 0;
-      }
-      .list:hover .showE p{
-        opacity: 0;
+        background-color: #fff;
       }
     </style>
   </head>
@@ -228,58 +229,47 @@
     
     <div class="container" id='main'>
       <div id="welcomeTxt">
-        <h4>企业版欢迎您</h4><br />
-        <p>平仄 • 一家专注互联网<strong style="font-size:24px">大爷</strong>的公司</p><br />
-        <p><a href="http://pingze.com/">了解我们</a></p>
+        <div class='welcomeM'>
+          <p>合作企业</p>
+        </div>
+        <div class='welcomeB'>
+          <p>平仄 • COLOR YOUR LIFE • 让喝茶变的简单时尚</p>
+        </div>
+        <div class='welcomeM' id="readmore">
+          <a href="javascript:;">READ MORE</a>
+          <img src="arrow.png">
+        </div>
       </div>
       <div id="showEnterprise">
         <div class="list" id="enterprise1">
-        <img src="jingdong.png" alt="">
-          <div class="showE">
-            <h4>01</h4>
-            <p>京东</p>
-          </div>
+        <img src="xiaomi.png" alt="">
           <div class="hideE">
-              <h4>京东</h4>
-              <p>这里是介绍</p>
+              <div>
+                <h4>小米科技</h4>
+                <p>"为发烧而生"</p>
+              </div>
            </div>
         </div>
         <div class="list" id="enterprise2">
-        <img src="youzan.png" alt="">
-          <div class="showE">
-            <h4>02</h4>
-            <p>有赞</p>
-          </div>
+        <img src="didi.png" alt="">
           <div class="hideE">
-              <h4>有赞</h4>
-              <p>这里是介绍</p>
+              <h4>滴滴出行</h4>
+              <p>"一站式出行平台"</p>
             </div>
         </div>
         <div class="list" id="enterprise3">
-        <img src="jingdong.png" alt="">
-          <div class="showE">
-            <h4>03</h4>
-            <p>京东</p>
-          </div>
+        <img src="newdun.png" alt="">
           <div class="hideE">
-              <h4>京东</h4>
-              <p>这里是介绍</p>
+              <h4>Newdun云解析</h4>
+              <p>"你身边的DNS专家"</p>
             </div>
         </div>
         <div class="list" id="enterprise4">
-        <img src="taobao.png" alt="">
-          <div class="showE">
-            <h4>04</h4>
-            <p>淘宝</p>
-          </div>
-          <div class="hideE">
-              <h4>淘宝</h4>
-              <p>这里是介绍</p>
-            </div>
+          <p>欢迎入驻平仄</p>
         </div>
         <div id="control">
-          <a href="showEnterprise_page2.html" class="arrow" id='prev'>&lt;</a>
-          <a href="showEnterprise_page1.html" class="arrow" id='next'>&gt;</a>
+          <a href="showEnterprise_page2.html" class="arrow" id='prev'><img src="prev.png"></a>
+          <a href="showEnterprise_page1.html" class="arrow" id='next'><img src="next.png"></a>
         </div>  
       </div>
       
@@ -305,7 +295,10 @@
     <script src="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
     <script>
       window.onload = function(){
-        
+        var welcomeTxt = document.getElementById('welcomeTxt');
+        var control = document.getElementById('control');
+        control.style.opacity = 1;
+        welcomeTxt.style.opacity = 1;
         var list = document.getElementsByClassName('list');
         for(var i = 0;i < list.length;i++){
           list[i].style.opacity = 1;

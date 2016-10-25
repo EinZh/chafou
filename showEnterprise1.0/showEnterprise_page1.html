@@ -20,6 +20,8 @@
     }
       .navbar{
         height: 104px;
+        margin: 0;
+        border-radius: 0;
       }
       .container{
         margin: 27px auto;
@@ -64,9 +66,10 @@
         color: #9e9e9f;
       }
       #main{
+            margin: 0;
             height: 570px;
             width: 100%;
-            background: url(bg6.jpeg) no-repeat;
+            background: url(showE.jpeg) no-repeat;
             -webkit-background-size: cover;
             background-size: cover;
         }
@@ -74,7 +77,8 @@
         position: relative;
         width: 80%;
         height: 80%;
-        left: 350px
+        left: 380px;
+        margin-top: 30px;
       }
       #control{
         position: absolute;
@@ -110,8 +114,8 @@
         height: 200px;
         border: 1px solid #fff;
         opacity: 0;
-      	transition: opacity 1s;
-      	overflow: hidden;
+        transition: opacity 1s;
+        overflow: hidden;
       }
       #enterprise1{
         position: absolute;
@@ -135,17 +139,23 @@
       }
       #welcomeTxt{
         position: absolute;
-        bottom: 150px;
-        left: 130px;
+        bottom: 170px;
+        left: 140px;
         color: #ccc;
       }
       #welcomeTxt h4{
         margin-bottom: -1px;
+        line-height: 28px;
       }
       #welcomeTxt p,#welcomeTxt h4{
         border: 1px solid #fff;
         display: inline-block;
-        padding: 4px;
+        padding: 5px 15px;
+        font-size: 17px;
+      }
+      #welcomeTxt a{
+        color: #fff;
+        text-decoration: none;
       }
       .showE{
         position: absolute;
@@ -153,26 +163,40 @@
         left: 10px;
         color: #fff;
       }
+      .showE h4,.showE p,.list img{
+        transition: opacity .3s;
+      }
       .showE h4{
         margin-bottom: 5px;
       }
+      .showE p{
+        font-weight: bold;
+        border-bottom: 2px solid #fff;
+      }
       .list img{
-      	width: 200px;
+        width: 200px;
       }
       .hideE{
-      	width: 200px;
-      	height: 200px;
-      	padding: 20px;
-      	color: #000;
-      	background-color: #fff;
-      	position: absolute;
-	    top: -324px;
-	    left: -11px;
-	    opacity: .9;
-	    transition: top .7s;
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        color: #000;
+        position: absolute;
+      top: -201px;
+      left: -1px;
+      transition: top .7s;
       }
       .list:hover .hideE{
-      	top: -125px;
+        top: 0;
+      }
+      .list:hover img{
+        opacity: .5;
+      }
+      .list:hover .showE h4{
+        opacity: 0;
+      }
+      .list:hover .showE p{
+        opacity: 0;
       }
     </style>
   </head>
@@ -204,54 +228,54 @@
     
     <div class="container" id='main'>
       <div id="welcomeTxt">
-        <h4>sometxt</h4><br />
-        <p>sometxtsometxtsometxtsometxtsometxt</p><br />
-        <p>sometxtsometxtsometxt</p>
+        <h4>企业版欢迎您</h4><br />
+        <p>平仄 • 一家专注互联网<strong style="font-size:24px">大爷</strong>的公司</p><br />
+        <p><a href="http://pingze.com/">了解我们</a></p>
       </div>
       <div id="showEnterprise">
         <div class="list" id="enterprise1">
-        <img src="taobao.png" alt="">
-          <div class="showE">
-            <h4>01</h4>
-            <p>淘宝</p>
-            <div class="hideE">
-            	<h4>淘宝</h4>
-            	<p>这里是介绍</p>
-            </div>
-          </div>
-        </div>
-        <div class="list" id="enterprise2">
         <img src="jingdong.png" alt="">
           <div class="showE">
-            <h4>02</h4>
+            <h4>01</h4>
             <p>京东</p>
-            <div class="hideE">
-            	<h4>京东</h4>
-            	<p>这里是介绍</p>
-            </div>
           </div>
+          <div class="hideE">
+              <h4>京东</h4>
+              <p>这里是介绍</p>
+           </div>
         </div>
-        <div class="list" id="enterprise3">
+        <div class="list" id="enterprise2">
         <img src="youzan.png" alt="">
           <div class="showE">
-            <h4>03</h4>
+            <h4>02</h4>
             <p>有赞</p>
-            <div class="hideE">
-            	<h4>有赞</h4>
-            	<p>这里是介绍</p>
-            </div>
           </div>
+          <div class="hideE">
+              <h4>有赞</h4>
+              <p>这里是介绍</p>
+            </div>
+        </div>
+        <div class="list" id="enterprise3">
+        <img src="jingdong.png" alt="">
+          <div class="showE">
+            <h4>03</h4>
+            <p>京东</p>
+          </div>
+          <div class="hideE">
+              <h4>京东</h4>
+              <p>这里是介绍</p>
+            </div>
         </div>
         <div class="list" id="enterprise4">
         <img src="taobao.png" alt="">
           <div class="showE">
             <h4>04</h4>
             <p>淘宝</p>
-            <div class="hideE">
-            	<h4>淘宝</h4>
-            	<p>这里是介绍</p>
-            </div>
           </div>
+          <div class="hideE">
+              <h4>淘宝</h4>
+              <p>这里是介绍</p>
+            </div>
         </div>
         <div id="control">
           <a href="showEnterprise_page3.html" class="arrow" id='prev'>&lt;</a>
@@ -280,13 +304,13 @@
     <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
     <script>
-    	window.onload = function(){
+      window.onload = function(){
         
-    		var list = document.getElementsByClassName('list');
-    		for(var i = 0;i < list.length;i++){
-    			list[i].style.opacity = 1;
-    		}
-    	}
+        var list = document.getElementsByClassName('list');
+        for(var i = 0;i < list.length;i++){
+          list[i].style.opacity = 1;
+        }
+      }
     </script>
   </body>
 </html>

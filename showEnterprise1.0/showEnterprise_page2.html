@@ -125,7 +125,7 @@
         left: 100px;
       }
       #enterprise1 img{
-        margin: 84px 24px;
+        margin: 45px 24px;
       }
       #enterprise2{
         position: absolute;
@@ -133,7 +133,7 @@
         left: 320px;
       }
       #enterprise2 img{
-        margin: 88px 24px;
+        margin: 54px 24px;
       }
       #enterprise3{
         position: absolute;
@@ -141,7 +141,7 @@
         left: 540px;
       }
       #enterprise3 img{
-        margin: 94px 24px;
+        margin: 61px 24px;
       }
       #enterprise4{
         position: absolute;
@@ -156,7 +156,7 @@
       }
       #welcomeTxt{
         position: absolute;
-        bottom: 150px;
+        bottom: 192px;
         left: 156px;
         color: #ccc;
         opacity: 0;
@@ -198,6 +198,26 @@
       .list:hover .hideE{
         top: 0;
         background-color: #fff;
+      }
+      .showE{
+        position: absolute;
+        top: 125px;
+        color: #fff;
+        left: 24px;
+        transition: opacity .5s;
+      }
+      .showE p{
+        padding-bottom: 7px;
+        border-bottom: 2px solid #fff;
+      }
+      .list img{
+        transition: opacity .5s;
+      }
+      .list:hover img{
+        opacity: 0;
+      }
+      .list:hover .showE{
+        opacity: 0;
       }
     </style>
   </head>
@@ -243,15 +263,23 @@
       <div id="showEnterprise">
         <div class="list" id="enterprise1">
         <img src="xiaomi.png" alt="">
+          <div class="showE">
+            <h4>01</h4>
+            <p>小米科技</p>
+          </div>
           <div class="hideE">
               <div>
-                <h4>小米科技</h4>
-                <p>"为发烧而生"</p>
+                <h4>"为发烧而生"</h4>
+                <p>专注于智能硬件和电子产品研发的移动互联网公司。首创了用互联网模式开发手机操作系统、发烧友参与开发改进的模式。</p>
               </div>
            </div>
         </div>
         <div class="list" id="enterprise2">
         <img src="didi.png" alt="">
+          <div class="showE">
+            <h4>02</h4>
+            <p>滴滴出行</p>
+          </div>
           <div class="hideE">
               <h4>滴滴出行</h4>
               <p>"一站式出行平台"</p>
@@ -259,6 +287,10 @@
         </div>
         <div class="list" id="enterprise3">
         <img src="newdun.png" alt="">
+          <div class="showE">
+            <h4>03</h4>
+            <p>Newdun云解析</p>
+          </div>
           <div class="hideE">
               <h4>Newdun云解析</h4>
               <p>"你身边的DNS专家"</p>
@@ -269,7 +301,7 @@
         </div>
         <div id="control">
           <a href="showEnterprise_page1.html" class="arrow" id='prev'><img src="prev.png"></a>
-          <a href="showEnterprise_page3.html" class="arrow" id='next'><img src="next.png"></a>
+          <a href="javascript:;" class="arrow" id='next'><img src="next.png"></a>
         </div>  
       </div>
       

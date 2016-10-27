@@ -1,0 +1,119 @@
+@font-face {
+    /* font-properties */
+    font-family: qingke;
+    src:url('方正清刻本悦宋简体.ttf');
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: qingke,Helvetica,Arial,sans-serif;
+}
+.line{
+	border: 2px solid #000;
+	border-radius: 2px;
+	width: 72%;
+	margin-left: 13%;
+	animation-delay:2.5s;
+}
+.maskB{
+	width: 0;
+	height: 0;
+    top: 50%;
+    left: 50%;
+	background-color: #ccc;
+	position: absolute;
+	opacity: .3;
+}
+.maskS{
+	width: 100%;
+    height: 100%;
+    top: 0;
+	background-color: #ccc;
+	position: absolute;
+	opacity: 0;
+}
+.section1{
+	background: url(page1Bg.jpg) no-repeat;
+	background-size: cover;
+}
+.section1 .container{
+	position: relative;
+	z-index: 2;
+}
+.section1 #headLogo{
+	padding: 25%;
+	animation-delay:1.5s;
+}
+.section1 h3{
+	width: 97%;
+	padding: 3%;
+    text-align: center;
+    font-size: 50px;
+}
+#page1Info{
+	position: relative;
+	margin-top: 10%;
+}
+#page1Info #page1Txt{
+	padding: 13%;
+	text-align: center;
+	line-height: 2;
+	position: relative;
+    z-index: 2;
+    font-size: 19px;
+}
+.section1 .firstP{
+	animation-delay:4.5s;
+}
+.section1 .secondP{
+	animation-delay:5.5s;
+}
+.arrow{
+	position: absolute;
+	bottom: 3%;
+	left: 43%;
+	opacity: 0;
+}
+.arrow img{
+	width: 50px;
+}
+.section2{
+	position: relative;
+}
+.page2Top,.page2Bottom{
+	position: absolute;
+	animation-delay:.3s;
+}
+.page2Top img,.page2Bottom img{
+	width: 100%;
+}
+.page2Top{
+	position: absolute;
+	top: 0;
+}
+.page2Bottom{
+	position: absolute;
+	bottom: 0;
+}
+.page2Middle{
+	position: absolute;
+    top: 30%;
+    line-height: 2;
+    left: 30%;
+}
+.page2Middle h3{
+	 position: relative;
+    top: 87px;
+    width: 1px;
+    left: -50px;
+    animation-delay:1s;
+}
+.section2 .firstP{
+	animation-delay:2s;
+}
+.section2 .secondP{
+	animation-delay:3s;
+}
+.section2 .thirdP{
+	animation-delay:4s;
+}

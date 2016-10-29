@@ -37,7 +37,7 @@
 			<div class="page2Middle">
 				<h3>平仄</h3>
 				<p class="firstP">我们是一支年轻的团队</p>
-				<p class="secondP">只想与你分享</p>
+				<p class="secondP">只想与你聊一聊</p>
 				<p class='thirdP'>关于茶叶的那点小事</p>
 			</div>
 			<div class="page2Bottom">
@@ -45,7 +45,21 @@
 			</div>
 		</div>
 		<div class="section section3">
-			
+			<div class="page3Info">
+				<img src="chahe.jpg" alt="">
+				<p>平仄小方盒</p>
+				<p class='nextP chaheP'>重新定义时尚</p>
+			</div>
+			<div class="page3Info">
+				<img src="chabao.jpg" alt="">
+				<p>薄如轻纱</p>
+				<p class='nextP chabaoP'>茶香弥漫</p>
+			</div>
+			<div class="page3Info">
+				<img src="hongcha.jpg" alt="">
+				<p>不一样的气质</p>
+				<p class='nextP hongchaP'>与众不同的你</p>
+			</div>
 		</div>
 		<div class="section section4">
 			
@@ -100,7 +114,8 @@
         					$('.thirdP').addClass('animated fadeIn');
         					break;
         				case 3:
-        					
+        					$('img').addClass('animated fadeInRight');
+        					$('p').addClass('animated fadeInLeft');
         					break;
         				default:
         					break;
@@ -133,7 +148,8 @@
         					$('.thirdP').removeClass('animated fadeIn');
         					break;
         				case 3:
-        					
+        					$('img').removeClass('animated fadeInRight');
+        					$('p').removeClass('animated fadeInLeft');
         					break;
         				default:
         					break;

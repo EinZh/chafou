@@ -36,6 +36,10 @@
 	background: url(page1Bg.jpg) no-repeat;
 	background-size: cover;
 }
+.section2,.section3,.section4,.section5{
+	background: url(chayeWL.jpg) no-repeat;
+	background-size: cover;
+}
 .section1 .container{
 	position: relative;
 	z-index: 2;
@@ -93,7 +97,7 @@
 }
 .page2Bottom{
 	position: absolute;
-	bottom: 0;
+	bottom: -5px;
 }
 .page2Middle{
 	position: absolute;
@@ -116,4 +120,34 @@
 }
 .section2 .thirdP{
 	animation-delay:4s;
+}
+.section3 .page3Info{
+	position: relative;
+    height: 20%;
+    padding: 11%;
+    padding-left: 13%;
+}
+.section3 .page3Info img{
+	height: 80%;
+    position: absolute;
+    right: 16%;
+    top: 10%;
+    animation-delay:1s;
+}
+.section3 .page3Info p{
+	width: 1px;
+	animation-delay:1s;
+}
+.section3 .page3Info .nextP{
+	position: relative;
+	left: 10%;
+}
+.section3 .page3Info .chaheP{
+	top: -61%;
+}
+.section3 .page3Info .chabaoP{
+	top: -46%;
+}
+.section3 .page3Info .hongchaP{
+	top: -77%;
 }

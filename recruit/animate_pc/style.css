@@ -13,7 +13,14 @@
 	border-radius: 2px;
 	width: 72%;
 	margin-left: 13%;
-	animation-delay:2.5s;
+	transition: margin-left 1s;
+	transition-delay: 3s;
+}
+#lineTop{
+	margin-left: 150%;
+}
+#lineBottom{
+	margin-left: -150%;
 }
 .maskB{
 	width: 0;
@@ -23,18 +30,32 @@
 	background-color: #ccc;
 	position: absolute;
 	opacity: .3;
+	transition: all 1s;
 }
 .maskS{
 	width: 100%;
     height: 100%;
-    top: 0;
+    top: 150%;
 	background-color: #ccc;
 	position: absolute;
+	transition: all 1s;
 	opacity: 0;
+	transition-delay: 4s;
 }
 .section1{
 	background: url(page1Bg.jpg) no-repeat;
 	background-size: cover;
+}
+#page1Txt p{
+	position: relative;
+}
+#page1Txt .firstP{
+	left: 85%;
+	transition-delay: 5s;
+}
+#page1Txt .secondP{
+	right: 110%;
+	transition-delay: 6s;
 }
 .section2,.section3,.section4,.section5{
 	background: url(chayeWL.jpg) no-repeat;
@@ -46,13 +67,15 @@
 }
 .section1 #headLogo{
 	padding: 25%;
-	animation-delay:1.5s;
 }
 .section1 h3{
 	width: 97%;
 	padding: 3%;
     text-align: center;
     font-size: 50px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 2s;
 }
 #page1Info{
 	position: relative;
@@ -66,17 +89,13 @@
     z-index: 2;
     font-size: 19px;
 }
-.section1 .firstP{
-	animation-delay:4.5s;
-}
-.section1 .secondP{
-	animation-delay:5.5s;
-}
+
 .arrow{
 	position: absolute;
 	bottom: 3%;
 	left: 43%;
 	opacity: 0;
+	transition: 1s;
 }
 .arrow img{
 	width: 50px;
@@ -84,9 +103,19 @@
 .section2{
 	position: relative;
 }
+.section2 img{
+	position: relative;
+	transition-delay: .5s;
+	transition: all 1s;
+}
+.page2Top img{
+	left: 100%;
+}
+.page2Bottom img{
+	right: 100%;
+}
 .page2Top,.page2Bottom{
 	position: absolute;
-	animation-delay:.3s;
 }
 .page2Top img,.page2Bottom img{
 	width: 100%;
@@ -110,33 +139,33 @@
     top: 87px;
     width: 1px;
     left: -50px;
-    animation-delay:1s;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1s;
 }
-.section2 .firstP{
-	animation-delay:2s;
-}
-.section2 .secondP{
-	animation-delay:3s;
-}
-.section2 .thirdP{
-	animation-delay:4s;
+.page2Middle p{
+	position: relative;
+	left: 155%;
+	transition: left 1s;
+    transition-delay: 1.5s;
 }
 .section3 .page3Info{
 	position: relative;
     height: 20%;
     padding: 11%;
-    padding-left: 13%;
+    padding-left: 13%;	
+    opacity: 0;
+    transition: opacity 1s;
 }
 .section3 .page3Info img{
 	height: 80%;
     position: absolute;
-    right: 16%;
+    right: -50%;
     top: 10%;
-    animation-delay:1s;
+    transition: right 1s;
 }
 .section3 .page3Info p{
 	width: 1px;
-	animation-delay:1s;
 }
 .section3 .page3Info .nextP{
 	position: relative;
@@ -150,4 +179,44 @@
 }
 .section3 .page3Info .hongchaP{
 	top: -77%;
+}
+.section4 #login-area{
+	    position: relative;
+    top: 20%;
+    left: 10%;
+}
+.section4 #btnLogin{
+	font-size: 20px;
+}
+#close{ 
+	background: url(close.png) no-repeat;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 17px;
+    top: 2px;
+    text-indent: -999px;
+ 	}
+#mask{ 
+	background-color:#ccc;
+	opacity:0.5;
+	filter: alpha(opacity=50); 
+	position:absolute; 
+	left:0;
+	top:0;
+	z-index:1000;
+	    width: 100%;
+    height: 100%;
+	}
+#login{ 
+    z-index: 1001;
+    background: url(loginBg.png) no-repeat;
+    position: relative;
+    width: 90%;
+    height: 64%;
+    top: 9%;
+	}
+#login-area a{
+	text-decoration: none;
+	color: #000;
 }

@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>11•11</title>
-	<link href="http://cdn.bootcss.com/animate.css/3.5.2/animate.css" rel="stylesheet">
 	<link href="http://cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" media="screen and (max-width:768px)" href="style.css">
 </head>
@@ -36,9 +35,9 @@
 			</div>
 			<div class="page2Middle">
 				<h3>平仄</h3>
-				<p class="firstP">我们是一支年轻的团队</p>
-				<p class="secondP">只想与你聊一聊</p>
-				<p class='thirdP'>关于茶叶的那点小事</p>
+				<p>我们是一支年轻的团队</p>
+				<p>只想与你聊一聊</p>
+				<p>关于茶叶的那点小事</p>
 			</div>
 			<div class="page2Bottom">
 				<img src="ourEW.jpeg" alt="">
@@ -61,8 +60,14 @@
 				<p class='nextP hongchaP'>与众不同的你</p>
 			</div>
 		</div>
-		<div class="section section4">
-			
+		<div class="section section4" id="test">
+			<div id="login-area">
+				<a href="javascript:;" id="btnLogin" class="login-btn">了解更多</a>
+		    </div>
+		    <!-- <div id="login">
+		    	<div id="close"></div>
+		    </div>
+		    <div id="mask"></div> -->
 		</div>
 		<div class="section section5">
 			
@@ -70,6 +75,7 @@
 	</div>
 	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
 	<script src="http://cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.js"></script>
+	<script src="http://cdn.bootcss.com/move.js/0.5.0/move.js"></script>
 	<script>
 		$(document).ready(function() {
 		    $('#fullpage').fullpage({
@@ -84,38 +90,50 @@
         					$('.maskB').css({
         						'width':'100%',
         						'height':'100%',
+        						'transition-delay':'1s',
         						'top':0,
-        						'left':0,
-        						'transition':'all 1s',
-        						'transition-delay':'.5s'
+        						'left':0
+        					});	
+        					move('.section1 h3')
+							  .set('opacity', 1)
+							  .end();
+							move('#lineTop')
+							  .set('margin-left', '13%')
+							  .duration('1s')
+							  .end();
+							move('#lineBottom')
+							  .set('margin-left', '13%')
+							  .duration('1s')
+							  .end();	
+							$('.maskS').css({
+        						'top':0,
+        						'opacity':.5
         					});
-        					$('.maskS').css({
-        						'opacity':.5,
-        						'transition':'all 1s',
-        						'transition-delay':'3.5s'
-        					});
-        					$('#headLogo').addClass('animated fadeIn');
-							$('#lineTop').addClass('animated fadeInRight');
-							$('#lineBottom').addClass('animated fadeInLeft');	
-							$('.firstP').addClass('animated fadeInLeft');
-							$('.secondP').addClass('animated fadeInRight');  
+        					move('#page1Txt .firstP')
+							  .set('left', 0)
+							  .duration('1s')
+							  .end();	
+							move('#page1Txt .secondP')
+							  .set('right', 0)
+							  .duration('1s')
+							  .end(); 
 							$('.arrow').css({
 								'opacity':1,
-								'transition-delay':'6.5s'
-							});
-							$('.arrow').addClass('animated infinite bounce');     					
+								'transition-delay':'7s'
+							})
         					break;
         				case 2:
-        					$('.page2Top').addClass('animated fadeInLeft');
-        					$('.page2Bottom').addClass('animated fadeInRight');
-        					$('h3').addClass('animated fadeIn');
-        					$('.firstP').addClass('animated fadeIn');
-        					$('.secondP').addClass('animated fadeIn');
-        					$('.thirdP').addClass('animated fadeIn');
+        					$('.page2Top img').css('left',0);
+        					$('.page2Bottom img').css('right',0);
+        					$('.page2Middle h3').css('opacity',1);
+        					$('.page2Middle p').css('left',0);
         					break;
         				case 3:
-        					$('img').addClass('animated fadeInRight');
-        					$('p').addClass('animated fadeInLeft');
+        					$('.section3 .page3Info img').css('right','16%');
+        					$('.section3 .page3Info').css('opacity',1);
+        					break;
+        				case 4:
+
         					break;
         				default:
         					break;
@@ -124,39 +142,41 @@
 		    	onLeave: function(index, nextIndex){
 		    		switch(index){
         				case 1:
-        					$('.maskB').css({
-        						'width':0,
-        						'height':0,
-        						'top':'50%',
-        						'left':'50%'
-        					});
-        					$('.maskS').css({
-        						'opacity':0
-        					});
-        					$('#headLogo').removeClass('animated fadeIn');
-							$('#lineTop').removeClass('animated fadeInRight');
-							$('#lineBottom').removeClass('animated fadeInLeft');	
-							$('.firstP').removeClass('animated fadeInLeft');
-							$('.secondP').removeClass('animated fadeInRight');  
+        					
         					break;
         				case 2:
-        					$('.page2Top').removeClass('animated fadeInLeft');
-        					$('.page2Bottom').removeClass('animated fadeInRight');
-        					$('h3').removeClass('animated fadeIn');
-        					$('.firstP').removeClass('animated fadeIn');
-        					$('.secondP').removeClass('animated fadeIn');
-        					$('.thirdP').removeClass('animated fadeIn');
+        					
         					break;
         				case 3:
-        					$('img').removeClass('animated fadeInRight');
-        					$('p').removeClass('animated fadeInLeft');
+        					
         					break;
         				default:
         					break;
         			}
 		    	},
 		    });
+		    var test = document.getElementById('test');
+		    function openNew(){
+		    	var oMask = document.createElement("div");
+				oMask.id="mask";
+				test.appendChild(oMask);
+				var oLogin = document.createElement("div");
+				oLogin.id="login";
+				oLogin.innerHTML="<div id='close'>点击关闭</div>";
+				test.appendChild(oLogin);
+				var oClose=document.getElementById("close");
+				oClose.onclick=oMask.onclick=function(){
+					test.removeChild(oLogin);
+					test.removeChild(oMask);
+				};
+
+		    }
+		    $("#btnLogin").on("click",function(){
+			  openNew();
+			});
 		});
+
+		
 	</script>
 </body>
 </html>

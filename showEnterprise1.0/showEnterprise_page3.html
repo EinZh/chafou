@@ -10,6 +10,9 @@
       <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" type="text/css" href="default.css" />
+    <link rel="stylesheet" type="text/css" href="component.css" />
+    <script src="modernizr.custom.js"></script>
     <style>
     *{
       margin: 0;
@@ -111,52 +114,10 @@
         top: 35px;
         left: 35px;
       }
-      .list{
-        width: 221px;
-        height: 221px;
-        border: 1px solid #fff;
-        opacity: 0;
-        overflow: hidden;
-        transition: opacity 2s;
-      }
-      #enterprise1{
-        position: absolute;
-        top: 15px;
-        left: 100px;
-      }
-      #enterprise1 img{
-        margin: 84px 24px;
-      }
-      #enterprise2{
-        position: absolute;
-        bottom: 0; 
-        left: 320px;
-      }
-      #enterprise2 img{
-        margin: 88px 24px;
-      }
-      #enterprise3{
-        position: absolute;
-        top: 15px;
-        left: 540px;
-      }
-      #enterprise3 img{
-        margin: 94px 24px;
-      }
-      #enterprise4{
-        position: absolute;
-        bottom: 0;
-        left: 760px;
-      }
-      #enterprise4 p{
-        color: #fff;
-        font-size: 18px;
-        margin: 92px 0;
-        text-align: center;
-      }
+      
       #welcomeTxt{
         position: absolute;
-        bottom: 150px;
+        bottom: 200px;
         left: 156px;
         color: #ccc;
         opacity: 0;
@@ -185,19 +146,37 @@
         text-decoration: none;
         margin-right: 27px;
       }
-      .hideE{
+      .grid li{
+        display: block;
         width: 221px;
         height: 221px;
-        padding: 20px;
-        color: #000;
-        position: absolute;
-      top: -201px;
-      left: -1px;
-      transition: all .7s;
+        border: #ccc solid 1px;
+        position: relative;
+        padding:0;
+        overflow: hidden;
       }
-      .list:hover .hideE{
-        top: 0;
-        background-color: #fff;
+      .grid li figure{
+        width: 100%;
+        height: 100%;
+      }
+      .grid figure div{
+        position: relative;
+        top: 40%;
+        left: 10%;
+      }
+      .cs-style-4 figcaption{
+        width: 66%;
+      }
+      #didi{
+        left: 100px;
+      }
+      #xiaomi{
+        left: 320px;
+        bottom: 1px;
+      }
+      #newdun{
+            bottom: 442px;
+    left: 540px;
       }
     </style>
   </head>
@@ -241,36 +220,43 @@
         </div>
       </div>
       <div id="showEnterprise">
-        <div class="list" id="enterprise1">
-        <img src="xiaomi.png" alt="">
-          <div class="hideE">
-              <div>
-                <h4>小米科技</h4>
-                <p>"为发烧而生"</p>
-              </div>
-           </div>
+        <ul class="grid cs-style-4">
+        <li id="didi">
+          <figure>
+            <div><img src="didi.png" alt="img05"></div>
+            <figcaption>
+              <h3>滴滴出行</h3>
+              <span>出行式一站平台</span>
+              <a href="javascript:;">了解更多</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li id='xiaomi'>
+          <figure>
+            <div><img src="xiaomi.png" alt="img06"></div>
+            <figcaption>
+              <h3>小米科技</h3>
+              <span>为发烧而生</span>
+              <a href="javascript:;">了解更多</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li id="newdun">
+          <figure>
+            <div><img src="newdun.png" alt="img02"></div>
+            <figcaption>
+              <h3>Newdun云解析</h3>
+              <span>你身边的DNS专家</span>
+              <a href="javascript:;">了解更多</a>
+            </figcaption>
+          </figure>
+        </li>
+        
+      </ul>
+      <div id="control">
+          <a href="showEnterprise_page1.html" class="arrow" id='prev'><img src="prev.png"></a>
+          <a href="javascript:;" class="arrow" id='next'><img src="next.png"></a>
         </div>
-        <div class="list" id="enterprise2">
-        <img src="didi.png" alt="">
-          <div class="hideE">
-              <h4>滴滴出行</h4>
-              <p>"一站式出行平台"</p>
-            </div>
-        </div>
-        <div class="list" id="enterprise3">
-        <img src="newdun.png" alt="">
-          <div class="hideE">
-              <h4>Newdun云解析</h4>
-              <p>"你身边的DNS专家"</p>
-            </div>
-        </div>
-        <div class="list" id="enterprise4">
-          <p>欢迎入驻平仄</p>
-        </div>
-        <div id="control">
-          <a href="showEnterprise_page2.html" class="arrow" id='prev'><img src="prev.png"></a>
-          <a href="showEnterprise_page1.html" class="arrow" id='next'><img src="next.png"></a>
-        </div>  
       </div>
       
     </div>
@@ -293,6 +279,7 @@
     </div>
     <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
+    <script src="toucheffects.js"></script>
     <script>
       window.onload = function(){
         var welcomeTxt = document.getElementById('welcomeTxt');

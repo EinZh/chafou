@@ -45,17 +45,17 @@
 		</div>
 		<div class="section section3">
 			<div class="page3Info">
-				<img src="chahe.jpg" alt="">
+				<img src="chahe.png" alt="">
 				<p>平仄小方盒</p>
 				<p class='nextP chaheP'>重新定义时尚</p>
 			</div>
 			<div class="page3Info">
-				<img src="chabao.jpg" alt="">
+				<img src="chabao.png" alt="">
 				<p>薄如轻纱</p>
 				<p class='nextP chabaoP'>茶香弥漫</p>
 			</div>
 			<div class="page3Info">
-				<img src="hongcha.jpg" alt="">
+				<img src="hongcha.png" alt="">
 				<p>不一样的气质</p>
 				<p class='nextP hongchaP'>与众不同的你</p>
 			</div>
@@ -64,10 +64,6 @@
 			<div id="login-area">
 				<a href="javascript:;" id="btnLogin" class="login-btn">了解更多</a>
 		    </div>
-		    <!-- <div id="login">
-		    	<div id="close"></div>
-		    </div>
-		    <div id="mask"></div> -->
 		</div>
 		<div class="section section5">
 			
@@ -164,14 +160,13 @@
 				oLogin.id="login";
 				oLogin.innerHTML="<div id='close'>点击关闭</div>";
 				test.appendChild(oLogin);
-				var oClose=document.getElementById("close");
-				oClose.onclick=oMask.onclick=function(){
-					test.removeChild(oLogin);
-					test.removeChild(oMask);
-				};
+				$("#mask,#close").on('touchstart', function(){
+				  test.removeChild(oMask);
+				  test.removeChild(oLogin);
+				});
 
 		    }
-		    $("#btnLogin").on("click",function(){
+		    $("#btnLogin").on('touchstart', function(){
 			  openNew();
 			});
 		});

@@ -220,3 +220,20 @@
 	text-decoration: none;
 	color: #000;
 }
+.walk{
+	width: 60px;
+	height: 100px;
+	overflow: hidden;
+	position: absolute;
+    bottom: 10%;
+    right: 10%;
+    background:url(walk.jpg);
+}
+@keyframes walk{
+    0% {background-position: -240px 0;}
+    20% {background-position: -180px 0;}
+    40% {background-position: -120px 0;}
+    60% {background-position: -60px 0;}
+    80% {background-position: 0 0;}
+    100% {background-position: -240px 0;}
+}

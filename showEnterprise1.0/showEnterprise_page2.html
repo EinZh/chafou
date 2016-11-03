@@ -69,7 +69,7 @@
             margin: 0;
             height: 570px;
             width: 100%;
-            background: url(showEbg.jpeg) no-repeat;
+            background: url(sectionBG_2.jpg) no-repeat;
             -webkit-background-size: cover;
             background-size: cover;
         }
@@ -82,18 +82,18 @@
       }
       #control{
         position: absolute;
-        left: 215px;
-        bottom: 35px;
+                left: 285px;
+    bottom: 89px;
         opacity: 0;
         transition: opacity 2s;
       }
       .arrow{
-        border: 1px #fff solid;
-        width: 36px;
-        height: 36px;
+        width: 96px;
+        height: 96px;
         font-size: 20px;
-        color: #fff;
+        color: #1ABC9C;
         text-align: center;
+        font-size: 55px;
       }
       .arrow:link {
         text-decoration: none;
@@ -107,118 +107,196 @@
       }
       #next{
         float: right;
-        position: absolute;
-        top: 35px;
-        left: 35px;
+    position: absolute;
+    top: 96px;
+    left: 97px;
+    height: 86px;
       }
-      .list{
-        width: 221px;
-        height: 221px;
-        border: 1px solid #fff;
-        opacity: 0;
-        overflow: hidden;
-        transition: opacity 2s;
-      }
+
       #enterprise1{
         position: absolute;
-        top: 15px;
-        left: 100px;
+        top: 200px;
+    left: 382px;
+    width: 287px;
+    height: 291px;
       }
-      #enterprise1 img{
-        margin: 45px 24px;
-      }
+
       #enterprise2{
         position: absolute;
-        bottom: 0; 
-        left: 320px;
+               bottom: 94px;
+    left: 672px;
+    width: 288px;
+    height: 288px;
       }
-      #enterprise2 img{
-        margin: 54px 24px;
-      }
+ 
       #enterprise3{
         position: absolute;
-        top: 15px;
-        left: 540px;
+             top: 201px;
+    left: 960px;
+    width: 193px;
+    height: 193px;
       }
-      #enterprise3 img{
-        margin: 61px 24px;
-      }
+      
       #enterprise4{
-        position: absolute;
-        bottom: 0;
-        left: 760px;
+            position: absolute;
+        bottom: 93px;
+    left: 1154px;
+    width: 92px;
+    height: 193px;
       }
-      #enterprise4 p{
-        color: #fff;
-        font-size: 18px;
-        margin: 92px 0;
-        text-align: center;
-      }
+     
       #welcomeTxt{
         position: absolute;
-        bottom: 192px;
-        left: 156px;
+            bottom: 383px;
+    left: 90px;
         color: #ccc;
         opacity: 0;
         transition: opacity 2s;
       }
-      .welcomeM,.welcomeB{
-        color: #fff;
-        height: 36px;
-        line-height: 36px;
-        text-align: left;
-        border: 1px solid #fff;
-        padding-left: 20px;
-      }
-      #welcomeTxt .welcomeM{
-        width: 186px;
-      }
-      #welcomeTxt .welcomeB{
-        width: 480px;
-        margin-top: -1px;
-      }
-      #readmore{
-        margin-top: 20px;
-      }
-      #readmore a{
-        color: #fff;
-        text-decoration: none;
-        margin-right: 27px;
-      }
-      .hideE{
-        width: 221px;
-        height: 221px;
-        padding: 20px;
+      .oneP,.twoP,.threeP{
+        position: absolute;
+        height: 98px;
         color: #000;
-        position: absolute;
-      top: -201px;
-      left: -1px;
-      transition: all .7s;
+        width: 1px;
       }
-      .list:hover .hideE{
-        top: 0;
-        background-color: #fff;
-      }
-      .showE{
-        position: absolute;
-        top: 125px;
-        color: #fff;
-        left: 24px;
-        transition: opacity .5s;
-      }
-      .showE p{
-        padding-bottom: 7px;
-        border-bottom: 2px solid #fff;
-      }
-      .list img{
-        transition: opacity .5s;
-      }
-      .list:hover img{
-        opacity: 0;
-      }
-      .list:hover .showE{
-        opacity: 0;
-      }
+    .threeP{
+      width: 196px;
+      top: 98px;
+      font-size: 18px;
+    padding-top: 33px;
+    padding-left: 12px;
+
+    }
+    .twoP{
+      left: 98px;
+          padding: 21px;
+    font-size: 15px;
+    }
+    .oneP{
+      padding: 18px;
+    padding-left: 34px;
+      font-size: 22px;
+    }
+
+       li {
+  -webkit-perspective: 400px;
+}
+
+.info {
+  /*hide-initial-state*/
+  transform: rotate3d(1,0,0, 90deg);
+  
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: #1ABC9C;
+}
+
+.in-top .info {
+   transform-origin: 50% 0%;
+   animation: in-top 400ms ease 0ms 1 forwards;
+}
+.in-right .info {
+  transform-origin: 100% 0%;
+  animation: in-right 400ms ease 0ms 1 forwards;
+}
+.in-bottom .info {
+  transform-origin: 50% 100%;
+  animation: in-bottom 400ms ease 0ms 1 forwards;
+}
+.in-left .info {
+  transform-origin: 0% 0%;
+  animation: in-left 400ms ease 0ms 1 forwards;
+}
+
+.out-top .info {
+  transform-origin: 50% 0%;
+  animation: out-top 600ms ease 0ms 1 forwards;
+}
+.out-right .info {
+  transform-origin: 100% 50%;
+  animation: out-right 400ms ease 0ms 1 forwards;
+}
+.out-bottom .info {
+  transform-origin: 50% 100%;
+  animation: out-bottom 400ms ease 0ms 1 forwards;
+}
+.out-left .info {
+  transform-origin: 0% 0%;
+  animation: out-left 400ms ease 0ms 1 forwards;
+}
+
+@keyframes in-top {
+  from {transform: rotate3d(-1,0,0, 90deg)}
+  to   {transform: rotate3d(0,0,0, 0deg)}}
+@keyframes in-right {
+  from {transform: rotate3d(0,-1,0, 90deg)}
+  to   {transform: rotate3d(0,0,0, 0deg)}}
+@keyframes in-bottom {
+  from {transform: rotate3d(1,0,0, 90deg)}
+  to   {transform: rotate3d(0,0,0, 0deg)}}
+@keyframes in-left {
+  from {transform: rotate3d(0,1,0, 90deg)}
+  to   {transform: rotate3d(0,0,0, 0deg)}}
+
+@keyframes out-top {
+  from {transform: rotate3d(0,0,0, 0deg)}
+  to   {transform: rotate3d(-1,0,0, 120deg)}}
+@keyframes out-right {
+  from {transform: rotate3d(0,0,0, 0deg)}
+  to   {transform: rotate3d(0,-1,0, 120deg)}}
+@keyframes out-bottom {
+  from {transform: rotate3d(0,0,0, 0deg)}
+  to   {transform: rotate3d(1,0,0, 120deg)}}
+@keyframes out-left {
+  from {transform: rotate3d(0,0,0, 0deg)}
+  to   {transform: rotate3d(0,1,0, 120deg)}}
+
+
+/* you can ignore this ones */
+ul {
+    margin: 50px 0 0 450px;
+}
+
+li {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+
+
+li a{
+  display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+}
+li .normal{
+  width: 100%;
+    height: 100%;
+    color: #34495E;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 50px;
+    line-height: 220px;
+}
+li p{
+  font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+}
+li h3{
+  margin: 0;
+    font-size: 20px;
+    color: #fff;
+}  
     </style>
   </head>
   <body>
@@ -234,76 +312,54 @@
           </button>
           <a class="navbar-brand" href="#">平仄</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav pull-right">
-            <li class="active"><a href="#">首页</a></li>
-            <li><a href="#allP">所有产品</a></li>
-            <li><a href="#hotP">热卖产品</a></li>
-            <li><a href="#newP">最新产品</a></li>
-            <li><a href="#about">关于我们</a></li>
-          </ul>
-        </div>
+        
       </div>
     </nav>
     <!-- main -->
     
     <div class="container" id='main'>
       <div id="welcomeTxt">
-        <div class='welcomeM'>
-          <p>合作企业</p>
-        </div>
-        <div class='welcomeB'>
-          <p>平仄 • COLOR YOUR LIFE • 让喝茶变的简单时尚</p>
-        </div>
-        <div class='welcomeM' id="readmore">
-          <a href="javascript:;">READ MORE</a>
-          <img src="arrow.png">
-        </div>
+        <div class="oneP">平仄</div>
+        <div class="twoP">COLOR YOUR LIFE</div>
+        <div class="threeP">合作伙伴。欢迎入驻。</div>
       </div>
-      <div id="showEnterprise">
-        <div class="list" id="enterprise1">
-        <img src="xiaomi.png" alt="">
-          <div class="showE">
-            <h4>01</h4>
-            <p>小米科技</p>
-          </div>
-          <div class="hideE">
-              <div>
-                <h4>"为发烧而生"</h4>
-                <p>专注于智能硬件和电子产品研发的移动互联网公司。首创了用互联网模式开发手机操作系统、发烧友参与开发改进的模式。</p>
-              </div>
-           </div>
-        </div>
-        <div class="list" id="enterprise2">
-        <img src="didi.png" alt="">
-          <div class="showE">
-            <h4>02</h4>
-            <p>滴滴出行</p>
-          </div>
-          <div class="hideE">
-              <h4>滴滴出行</h4>
-              <p>"一站式出行平台"</p>
+        <ul>
+          <li id='enterprise1'>
+            <a href="#" class="normal">
+              <img src="xiaomi.jpg" alt="">
+            </a>
+            <div class="info">
+              <h3>小米科技</h3>
+              <p>"为发烧而生"</p>
             </div>
-        </div>
-        <div class="list" id="enterprise3">
-        <img src="newdun.png" alt="">
-          <div class="showE">
-            <h4>03</h4>
-            <p>Newdun云解析</p>
-          </div>
-          <div class="hideE">
-              <h4>Newdun云解析</h4>
-              <p>"你身边的DNS专家"</p>
+          </li>
+          <li id='enterprise2'>
+            <a href="#" class="normal">
+              <img src="didi.jpg" alt="">
+            </a>
+            <div class="info">
+              <h3>滴滴打车</h3>
+              <p>"出行式一站平台"</p>
             </div>
-        </div>
-        <div class="list" id="enterprise4">
-          <p>欢迎入驻平仄</p>
-        </div>
+          </li>
+          <li id='enterprise3'>
+            <a href="#" class="normal">
+              <img src="newdun.jpg" alt="">
+            </a>
+            <div class="info">
+              <h3>NewDun云解析</h3>
+              <p>"您身边的DNS专家"</p>
+            </div>
+          </li>
+          <li id='enterprise4'>
+            <img src="welcomeI.png" alt="">
+          </li>
+        </ul>
+       
         <div id="control">
-          <a href="showEnterprise_page1.html" class="arrow" id='prev'><img src="prev.png"></a>
-          <a href="javascript:;" class="arrow" id='next'><img src="next.png"></a>
+          <a href="showEnterprise_page1.html" class="arrow" id='prev'>&lt;</a>
+          <a href="showEnterprise_page3.html" class="arrow" id='next'>&gt;</a>
         </div>  
-      </div>
       
     </div>
     
@@ -335,6 +391,58 @@
         for(var i = 0;i < list.length;i++){
           list[i].style.opacity = 1;
         }
+      }
+    </script>
+    <script>
+      window.onload = function(){
+        var welcomeTxt = document.getElementById('welcomeTxt');
+        var control = document.getElementById('control');
+        control.style.opacity = 1;
+        welcomeTxt.style.opacity = 1;
+        // var list = document.getElementsByClassName('list');
+        // for(var i = 0;i < list.length;i++){
+        //   list[i].style.opacity = 1;
+        // }
+
+         var nodes  = document.querySelectorAll('li'),
+    _nodes = [].slice.call(nodes, 0);
+
+var getDirection = function (ev, obj) {
+    var w = obj.offsetWidth,
+        h = obj.offsetHeight,
+        x = (ev.pageX - obj.offsetLeft - (w / 2) * (w > h ? (h / w) : 1)),
+        y = (ev.pageY - obj.offsetTop - (h / 2) * (h > w ? (w / h) : 1)),
+        d = Math.round( Math.atan2(y, x) / 1.57079633 + 5 ) % 4;
+  
+    return d;
+};
+
+var addClass = function ( ev, obj, state ) {
+    var direction = getDirection( ev, obj ),
+        class_suffix = "";
+    
+    obj.className = "";
+    
+    switch ( direction ) {
+        case 0 : class_suffix = '-top';    break;
+        case 1 : class_suffix = '-right';  break;
+        case 2 : class_suffix = '-bottom'; break;
+        case 3 : class_suffix = '-left';   break;
+    }
+    
+    obj.classList.add( state + class_suffix );
+};
+
+// bind events
+_nodes.forEach(function (el) {
+    el.addEventListener('mouseover', function (ev) {
+        addClass( ev, this, 'in' );
+    }, false);
+
+    el.addEventListener('mouseout', function (ev) {
+        addClass( ev, this, 'out' );
+    }, false);
+});
       }
     </script>
   </body>

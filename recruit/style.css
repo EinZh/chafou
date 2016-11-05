@@ -1,0 +1,172 @@
+@font-face {
+    /* font-properties */
+    font-family: qingke;
+    src:url('animate_pc/方正清刻本悦宋简体.ttf');
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: qingke,Helvetica,Arial,sans-serif;
+}
+.line{
+	border: 2px solid #000;
+	border-radius: 2px;
+	width: 72%;
+	margin-left: 13%;
+	transition: margin-left 1s;
+	transition-delay: 3s;
+}
+#lineTop{
+	margin-left: 150%;
+}
+#lineBottom{
+	margin-left: -150%;
+}
+.maskB{
+	width: 0;
+	height: 0;
+    top: 50%;
+    left: 50%;
+	background-color: #ccc;
+	position: absolute;
+	opacity: .3;
+	transition: all 1s;
+}
+.maskS{
+	width: 100%;
+    height: 100%;
+    top: 150%;
+	background-color: #ccc;
+	position: absolute;
+	transition: all 1s;
+	opacity: 0;
+	transition-delay: 4s;
+}
+.section1{
+	background: url(page1Bg.jpg) no-repeat;
+	background-size: cover;
+}
+#page1Txt p{
+	position: relative;
+}
+#page1Txt .firstP{
+	left: 85%;
+	transition-delay: 5s;
+}
+#page1Txt .secondP{
+	right: 110%;
+	transition-delay: 6s;
+}
+
+.section1 .container{
+	position: relative;
+	z-index: 2;
+}
+.section1 #headLogo{
+	padding: 25%;
+}
+.section1 h3{
+	width: 97%;
+	padding: 3%;
+    text-align: center;
+    font-size: 50px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 2s;
+}
+#page1Info{
+	position: relative;
+	margin-top: 10%;
+}
+#page1Info #page1Txt{
+	padding: 13%;
+	text-align: center;
+	line-height: 2;
+	position: relative;
+    z-index: 2;
+    font-size: 19px;
+}
+
+.arrow{
+	position: absolute;
+	bottom: 3%;
+	left: 43%;
+	opacity: 0;
+	transition: 1s;
+}
+.arrow img{
+	width: 50px;
+}
+.section2{
+	background:url(1/caiwu.jpg); 
+	background-size: 100% 100%;
+}
+.section2 #pink,.section2 #yellow,.section2 #yaoqiu1{
+	position: absolute;
+}
+.section2 #pink{
+	background:url(1/pink.png); 
+	background-size: 100% 100%;
+	width: 40%;
+    height: 25%;
+    right: 0;
+}
+.section2 #yellow{
+	background:url(1/yellow.png); 
+	background-size: 100% 100%;
+	    width: 70%;
+    height: 30%;
+    top: 7%;
+
+}
+.section2 #yaoqiu1{
+	background:url(1/yaoqiu.png); 
+	background-size: 100% 100%;
+	    width: 30%;
+    height: 20%;
+    top: 40%;
+    left: 8%;
+
+}
+.section3{
+	background: url(2/xingzheng.jpg);
+	background-size: 100% 100%;
+}
+.section3 #pao_ji{
+	background: url(2/pao_ji.png);
+	    height: 60%;
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    top: 28%;
+    background-size: 200% 100%;
+}
+@keyframes walk{
+    0% {background-position: 0 0;}
+    50% {background-position: -100% 0;}
+    100% {background-position: 0 0;}
+}
+.section3 #yaoqiu2{
+	    background: url(2/yaoqiu.png);
+    background-size: 100% 100%;
+    width: 30%;
+    height: 20%;
+    top: 8%;
+    left: 5%;
+    position: absolute;
+
+}
+.section4{
+	background: url(3/yunying.jpg);
+	background-size: 100% 100%;
+}
+.section4 #yaoqiu3{
+	    background: url(3/yaoqiu.png);
+    background-size: 100% 100%;
+    width: 30%;
+    height: 20%;
+    top: 16%;
+    left: 2%;
+    position: absolute;
+
+}

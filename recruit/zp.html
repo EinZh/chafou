@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>yoyoyo</title>
+	<link href="http://cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.css" rel="stylesheet">
+	<link href="http://cdn.bootcss.com/animate.css/3.5.2/animate.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width:768px)" href="style.css">
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section section1">
+			<div class="container">
+				<div id="headLogo">
+					<div class="line" id="lineTop"></div>
+					<h3>平仄</h3>
+					<div class="line" id="lineBottom"></div>
+				</div>
+				<div id="page1Info">
+					<div id="page1Txt">
+						<p class='firstP'>关于喝茶</p>
+						<p class='secondP'>终于有一个，简单的答案</p>
+					</div>
+					<div class="maskS"></div>
+				</div>
+			</div>
+			<div class="maskB"></div>
+			<div class="arrow">
+				<img src="down.png" alt="">
+			</div>
+		</div>
+		<div class="section section2">
+			<div id="pink"></div>
+			<div id="yellow"></div>
+			<div id="yaoqiu1"></div>
+		</div>
+		<div class="section section3">
+			<div id="pao_ji"></div>
+			<div id="yaoqiu2"></div>
+		</div>
+		<div class="section section4">
+			<div id="yaoqiu3"></div>
+		</div>
+		<div class="section section5">
+
+		</div>
+	</div>
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+	<script src="http://cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.js"></script>
+	<script src="http://cdn.bootcss.com/move.js/0.5.0/move.js"></script>
+	<script>
+		$(document).ready(function() {
+		    $('#fullpage').fullpage({
+		    	anchors:['page1', 'page2', 'page3', 'page4','page5'],
+		    	navigation: true,
+		    	verticalCentered: false,
+		    	loopBottom: true,
+		    	fixedElements: '.arrow',
+		    	afterLoad: function(anchorLink, index){
+		    		switch(index){
+        				case 1:
+        					$('.maskB').css({
+        						'width':'100%',
+        						'height':'100%',
+        						'transition-delay':'1s',
+        						'top':0,
+        						'left':0
+        					});	
+        					move('.section1 h3')
+							  .set('opacity', 1)
+							  .end();
+							move('#lineTop')
+							  .set('margin-left', '13%')
+							  .duration('1s')
+							  .end();
+							move('#lineBottom')
+							  .set('margin-left', '13%')
+							  .duration('1s')
+							  .end();	
+							$('.maskS').css({
+        						'top':0,
+        						'opacity':.5
+        					});
+        					move('#page1Txt .firstP')
+							  .set('left', 0)
+							  .duration('1s')
+							  .end();	
+							move('#page1Txt .secondP')
+							  .set('right', 0)
+							  .duration('1s')
+							  .end(); 
+							$('.arrow').css({
+								'opacity':1,
+								'transition-delay':'7s'
+							})
+							$('.arrow').addClass('animated bounce infinite');
+        					break;
+        				case 2:
+        					$('#pink').addClass('animated swing infinite');
+        					$('#yellow').addClass('animated wobble infinite');
+        					break;
+        				case 3:
+        					$('#pao_ji').css('animation','walk .5s steps(1, start) infinite');
+        					break;
+        				case 4:
+        					break;
+        				default:
+        					break;
+        			}
+		    	},
+		    	onLeave: function(index, nextIndex){
+		    		switch(index){
+        				case 1:
+        					
+        					break;
+        				case 2:
+        					$('#pink').removeClass('animated swing infinite');
+        					$('#yellow').removeClass('animated wobble infinite');
+        					break;
+        				case 3:
+        					$('#pao_ji').css('animation','');
+        					break;
+        				default:
+        					break;
+        			}
+		    	},
+		    });
+		  //   var section2 = document.getElementById('section2');
+		  //   function openNew(){
+		  //   	var oMask = document.createElement("div");
+				// oMask.id="mask";
+				// section2.appendChild(oMask);
+				// var oLogin = document.createElement("div");
+				// oLogin.id="login";
+				// oLogin.innerHTML="<div id='close'>点击关闭</div>";
+				// section2.appendChild(oLogin);
+				// $("#mask,#close").on('touchstart', function(){
+				//   section2.removeChild(oMask);
+				//   section2.removeChild(oLogin);
+				// });
+
+		  //   }
+		 //    $("#yaoqiu1").on('touchstart', function(){
+			//   openNew();
+			// });
+		});
+
+		
+	</script>
+</body>
+</html>

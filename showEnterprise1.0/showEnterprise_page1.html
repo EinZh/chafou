@@ -118,6 +118,7 @@
         opacity: 0;
         overflow: hidden;
         transition: opacity 2s;
+        box-shadow: 1px 1px 10px #000;
       }
       #enterprise1{
         position: absolute;
@@ -159,7 +160,7 @@
       }
       #welcomeTxt{
         position: absolute;
-        bottom: 192px;
+        bottom: 178px;
         left: 156px;
         color: #ccc;
         opacity: 0;
@@ -191,6 +192,7 @@
         color: #fff;
         text-decoration: none;
         margin-right: 27px;
+        letter-spacing: 5px;
       }
       .hideE{
         width: 221px;
@@ -204,13 +206,27 @@
       }
       .list:hover .hideE{
         top: 0;
-        background-color: #fff;
+        background-color: #ececec;
       }
       .list img{
         transition: opacity .3s;
       }
       .list:hover img{
         opacity: 0;
+      }
+      .modal-body{
+        color: #000;
+        text-align: center;
+        padding-bottom: 36px;
+      }
+      .modal-body p{
+        margin: 30px 0;
+      }
+      .form-group{
+        padding: 10px 50px 30px 0;
+      }
+      .form-group .control-label{
+        text-align: right;
       }
     </style>
   </head>
@@ -249,8 +265,46 @@
           <p>平仄 • COLOR YOUR LIFE • 让喝茶变的简单时尚</p>
         </div>
         <div class='welcomeM' id="readmore">
-          <a href="javascript:;">READ MORE</a>
+          <a href="javascript:;" data-toggle="modal" data-target="#myModal">入驻平仄</a>
           <img src="arrow.png">
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">入驻平仄</h4>
+      </div>
+      <div class="modal-body">
+        <h3>平仄</h3>
+        <h5>COLOR YOUR LIFE</h5>
+        <p>其实茶水间也可以染上活力，带上故事。 <br /> 如果你也享受茶的沁谧，叶的馨香。 <br />如果你也向往偷得浮生半日闲的悠然。 <br/>平仄企业版，随时欢迎你的加入。 </p>
+         <div class="form-group">
+            <label for="inputEmail3" class="col-sm-3 control-label">公司名称</label>
+            <div class="col-sm-9">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="公司名称">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-3 control-label">联系人名称</label>
+            <div class="col-sm-9">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="联系人名称">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-3 control-label">联系人电话</label>
+            <div class="col-sm-9">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="联系人电话">
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
       </div>
       <div id="showEnterprise">

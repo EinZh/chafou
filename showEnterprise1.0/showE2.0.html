@@ -10,217 +10,7 @@
       <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-    @font-face {
-    /* font-properties */
-    font-family: qingke;
-    src:url('方正兰亭黑简.TTF');
-}
-
-@font-face {
-    /* font-properties */
-    font-family: fzlth;
-    src:url('方正兰亭超细黑简体.ttf');
-}
-    *{
-      margin: 0;
-      padding: 0; 
-      font-family: 'MicrosoftYaHei';
-    }
-
-    .container{
-      width:1200px;
-      margin:0 auto;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-      .aboutUs{
-        height: 273px;
-        background-color: #FBFBFB;
-        padding: 20px;
-      }
-      .aboutTxt{
-        margin-top: 55px;
-        margin-left: 150px;
-      }
-      .aboutTxt h4{
-        color: #3e3a39;
-        font-size: 18px;
-        margin-bottom: 27px;
-      }
-      .aboutTxt span{
-        margin-left: 9px;
-        font-size: 13px;
-        color: #9e9e9f;
-      }
-      }
-      .aboutTxt p{
-        color: #717071;
-      }
-      .aboutTel{
-        margin-top: -110px;
-        margin-right: 150px;
-        padding-left: 180px;
-        border-left: 1px solid #9e9e9f;
-      }
-      .aboutTel h3{
-        color: #00ae41;
-        margin-bottom: 27px;
-      }
-      .aboutTel{
-        color: #9e9e9f;
-      }
-      #main{
-            width: 100%;
-            background: url(bg_2.0.jpg);
-            background-size: 100%;
-            overflow: hidden;
-        }
-		
-       .welcomeTxt{
-          text-align: center;
-       }
-
-       .welcomeTxt h1{
-          color: #fff;
-          letter-spacing: 10px;
-          margin-top: 110px;
-          margin-bottom: 18px;
-       }
-       .welcomeTxt h4,.modal-body h4{
-        margin-bottom: 18px;
-       }
-       .welcomeTxt h4,.welcomeTxt h2{
-        color: #b1b1b4;
-       }
-       .welcomeTxt h2,.modal-body h2{
-        font-family: fzlth;
-       }
-       .modal-body h1{
-        margin-top: 95px;
-        margin-bottom: 18px;
-       }
-       .modal-body{
-        color: #000;
-        text-align: center;
-        padding-bottom: 36px;
-      }
-      .modal-body p{
-        margin: 30px 0;
-      }
-      .form-group{
-        padding: 10px 50px 30px 0;
-        width: 580px;
-        margin: 13px auto;
-      }
-      .form-group .control-label{
-        text-align: right;
-      }
-      .jiaru,#modal-tj{
-        color: #fff;
-        background-color: #4a4d5e;
-        border:none; 
-      }
-      .jiaru{
-        margin-top: 77px;
-            padding: 10px 50px;
-      }
-      .wrap{
-        text-align: center;
-      }
-      .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
-          outline: none;
-      } 
-      .jiaru.focus, .jiaru:focus, .jiaru:hover {
-          color: #fff;
-          text-decoration: none;
-      }      .btn{
-            box-shadow: 0 3px 10px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2);
-      }
-      #modal-gb{
-        background-color: #fff;
-      }
-      .modal-footer .btn{
-        width: 160px;
-      }
-      #modal-gb{
-        margin-right: 77px;
-      }
-      .modal-footer {
-    padding: 40px;
-    text-align: center;
-}
-.modal-body p{
-  font-size: 16px;
-  line-height: 2;
-  margin:55px 0 70px 0; 
-}
-.modal-dialog {
-  width: 1200px;
-  height: 580px;
-  margin-top: 140px;
-}
-.modal-footer {
-    padding: 36px 0 115px 0;
-    border: none;
-}
-@media screen and (max-width: 768px) {
-    .modal-footer .btn{
-        width: 115px;
-      }
-}
-.nav{
-  background-color: #101114;
-}
-.logo{
-  float: left;
-
-}
-.logo img{
-  height: 100%;
-}
-.nav-list{
-  float: right;
-  margin-right: -70px;
-}
-.nav-list li{
-    float: left;
-    list-style: none;
-    font-family: qingke;
-    color: #fff;
-    line-height: 67px;
-    margin-right: 45px;
-    min-width: 70px;
-    text-align: center;
-    border-top: 3px solid #101114;
-}
-.nav-list .active{
-  border-top: 3px solid #fff;
-}
-.showE{
-  margin-top: 170px;
-  margin-bottom: 150px;
-}
-.showE li{
-  width: 30%;
-  margin-right: 5%;
-  height: 525px;
-  float: left;
-  background-color: #fff;
-  list-style: none;
-  text-align: center;
-}
-.showE li img{
-  margin-top: 70px;
-}
-.showE ul:after{
-  content: '';
-  display: table;
-  clear: both;
-}
-
-    </style>
+    <link href="showE.css" rel="stylesheet">
   </head>
   <body>
     <!-- nav -->
@@ -231,11 +21,11 @@
         </div>
         <div class="nav-list">
           <ul>
-            <li class='active'>首页</li>
-            <li>所有产品</li>
-            <li>最新产品</li>
-            <li>最热产品</li>
-            <li>关于我们</li>
+            <li><a href="http://pingze.com/index.php">首页</a></li>
+            <li><a href="http://pingze.com/category.php?id=866">所有产品</a></li>
+            <li><a href="http://pingze.com/category.php?id=870">热卖产品</a></li>
+            <li><a href="http://pingze.com/category.php?id=881">最新产品</a></li>
+            <li><a href="http://pingze.com/about_pingze.php?act=show_article">关于我们</a></li>
           </ul>
         </div>
       </div>
@@ -260,8 +50,9 @@
         <h1>平仄</h1>
           <h4>COLOR YOUR LIFE</h4>
           <h2>让喝茶变的简单时尚</h2>
-        
-        <p>其实茶水间也可以染上活力，带上故事。 <br /> 如果你也享受茶的沁谧，叶的馨香。 <br />如果你也向往偷得浮生半日闲的悠然。 <br/>平仄企业版，随时欢迎你的加入。 </p>
+        <div class="modalTxt">
+          <p>其实茶水间也可以染上活力，带上故事。 </p><p> 如果你也享受茶的沁谧，叶的馨香。</p><p>如果你也向往偷得浮生半日闲的悠然。</p> <p>平仄企业版，随时欢迎你的加入。 </p>
+        </div>
          <div class="form-group">
             <label for="inputEmail3" class="col-sm-3 control-label">公司名称</label>
             <div class="col-sm-9">
@@ -288,7 +79,7 @@
     </div>
   </div>
 </div>
-<div class="showE">
+<div id="showE">
   <ul>
       <li>
         <img src="xiaomi.jpeg" alt="">
@@ -306,21 +97,15 @@
     </div>
     <!-- info -->
     <div class="footer">
-      <div class="aboutUs">
-        <div class="aboutTxt">
-          <h4>关于我们
-            <span>ABOUT US</span>
-          </h4>
-          <p style="line-height: 2">平仄是一个互联网茶品牌。让喝茶变得简单时尚。平仄聚集了一波才华横溢、热情四溢的多元化年轻人。<br />  
-我们也是一群热爱喝茶的年轻人，我们享受把喜爱融入到自己的产品之中。</p>
-        </div>
-        <div class="aboutTel pull-right">
-          <h3>400-9922-432</h3>
-          <p>周一至周六 9:00-18:00</p>
-        </div>
-      </div>
+      <p>欢迎入驻平仄</p>
     </div>
     <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.5/js/bootstrap.js"></script>
+    <script>
+      window.onload = function(){
+        var showE = document.getElementById('showE');
+        showE.style.opacity = 1;
+      }
+    </script>
   </body>
 </html>

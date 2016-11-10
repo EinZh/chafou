@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>I want U</title>
+	<link href="http://cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width:768px)" href="zp.css">
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section" id="section1">
+			<div id="txt_1"></div>
+			<div class="pzTxt">
+				<p>平仄</p>
+				<p>年轻人的茶叶品牌</p>
+			</div>
+		</div>
+		<div class="section" id="section2">
+			<div class="logoCon">
+				<img src="img/logo.png" alt="">
+				<h2>COLOR YOUR LIFE</h2>
+			</div>
+			<div id="wrap2">
+				<div id="pz_introduction">
+					<p>这里是公司简介，包括愿景和目标/这里是公司简介，包括愿景和目标/这里是公司简介，包括愿景和目标/这里是公司简介，包括愿景和目标/test</p>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="section3">
+			<a href="javascript:;" class="btn-modal" id='btn-xz'>
+				<div class="yaoqiu"></div>
+			</a>
+			<div id="ji_3"></div>
+			<div class="detail" id="detail_xz">
+				<div class="close" id="close-xz"><img src="img/close.png" alt=""></div>
+				<h3>行政助理</h3>
+				<p>地点</p>
+				<p>学位</p>
+				<p>工作年限</p>
+				<hr>
+				<div class="miaoshu">
+					<p>岗位描述：</p>
+					<ul>
+						<li>1.test</li>
+						<li>2.test</li>
+						<li>3.test</li>
+						<li>4.test</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="section4">
+			<a href="javascript:;" class="btn-modal" id="btn-cw">
+				<div class="yaoqiu"></div>
+			</a>
+			<div id="ji_4"></div>
+			<div class="detail" id="detail_cw">
+				<div class="close" id="close-cw"><img src="img/close.png" alt=""></div>
+				<h3>公司财务</h3>
+				<p>地点</p>
+				<p>学位</p>
+				<p>工作年限</p>
+				<hr>
+				<div class="miaoshu">
+					<p>岗位描述：</p>
+					<ul>
+						<li>1.test</li>
+						<li>2.test</li>
+						<li>3.test</li>
+						<li>4.test</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="section5">
+			<a href="javascript:;" class="btn-modal" id='btn-yy'>
+				<div class="yaoqiu"></div>
+			</a>
+			<div id="ji_5"></div>
+			<div class="detail" id="detail_yy">
+				<div class="close" id="close-yy"><img src="img/close.png" alt=""></div>
+				<h3>运营客服</h3>
+				<p>地点</p>
+				<p>学位</p>
+				<p>工作年限</p>
+				<hr>
+				<div class="miaoshu">
+					<p>岗位描述：</p>
+					<ul>
+						<li>1.test</li>
+						<li>2.test</li>
+						<li>3.test</li>
+						<li>4.test</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="section6">
+			<h2>投递简历</h2>
+			<div id="ji_6"></div>
+			<div class="pzDetail">
+				<p>这里是投递邮箱</p>
+				<p>这里是联系电话</p>
+			</div>
+		</div>
+	</div>
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+	<script src="http://cdn.bootcss.com/fullPage.js/2.8.7/jquery.fullPage.js"></script>
+	<script src="http://cdn.bootcss.com/move.js/0.5.0/move.js"></script>
+	<script>
+		$(document).ready(function() {
+		    $('#fullpage').fullpage({
+		    	anchors:['page1', 'page2', 'page3', 'page4','page5','page6'],
+		    	navigation: true,
+		    	verticalCentered: false,
+		    	loopBottom: true,
+		    	// fixedElements: '.arrow',
+		    	afterLoad: function(anchorLink, index){
+		    		switch(index){
+        				case 1:
+        					move('#txt_1')
+        					  .set('opacity',1)
+							  .set('width','66%')
+							  .set('height','30%')
+							  .end(function(){
+							  	move('.pzTxt')
+							  	  .set('opacity',1)
+							  	  .end();
+							  });
+        					break;
+        				case 2:
+        					move('.logoCon')
+        					  .set('opacity',1)
+        					  .set('top','10%')
+        					  .end(function(){
+        					  	move('#wrap2')
+        					  	  .set('opacity',1)
+        					  	  .set('width','77%')
+        					  	  .set('height','40%')
+        					  	  .end(function(){
+        					  	  	move('#pz_introduction p')
+        					  	  	  .set('margin-left',0)
+        					  	  	  .set('opacity',1)
+        					  	  	  .end();
+        					  	  });
+        					  });
+        					break;
+        				case 3:
+        					move('#ji_3')
+        					  .set('left','29%')
+        					  .end(function(){
+        					  	move('#section3 .yaoqiu')
+        					  	  .set('opacity',1)
+        					  	  .end();
+        					  })
+        					break;
+        				case 4:
+        					$('#ji_4').css('opacity',1);
+        					move('#ji_4')
+        					  .set('top','11%')
+        					  .end(function(){
+        					  	move('#section4 .yaoqiu')
+        					  	  .set('opacity',1)
+        					  	  .end();
+        					  })
+        					break;
+        				case 5:
+        					move('#ji_5')
+        					  .set('animation','wobble 1s')
+        					  .end(function(){
+        					  	move('#section5 .yaoqiu')
+        					  	  .set('opacity',1)
+        					  	  .end();
+        					  })
+        					break;
+        				case 6:
+        					move('#ji_6')
+        					  .set('left','46%')
+        					  .end();
+        					break;
+        				default:
+        					break;
+        			}
+		    	},
+		    	onLeave: function(index, nextIndex){
+		    		switch(index){
+        				case 1:
+        					$('.pzTxt').css('opacity',0);
+        					$('#txt_1').css('opacity',0);
+        					move('#txt_1')
+							  .set('width','22%')
+							  .set('height','10%')
+							  .end();
+        					break;
+        				case 2:
+        					$('.logoCon').css('opacity',0);
+        					move('.logoCon')
+        					  .set('top','-20%')
+        					  .end();
+        					move('#pz_introduction p')
+        					  .set('margin-left','-100%')
+        					  .set('opacity',0)
+        					  .end(function(){
+        					  	move('#wrap2')
+	        					  .set('opacity',0)
+	        					  .set('width','1%')
+	        					  .set('height','1%')
+	        					  .end();
+        					  });
+        					break;
+        				case 3:
+        					move('#ji_3')
+        					  .set('left','-51%')
+        					  .end();
+        					move('#section3 .yaoqiu')
+        					  .set('opacity',0)
+        					  .end();
+        					break;
+        				case 4:
+        					move('#ji_4')
+        					  .set('opacity',0)
+        					  .end(function(){
+        					  	move('#ji_4')
+	        					  .set('top','-50%')
+	        					  .end();
+        					  })
+        					move('#section4 .yaoqiu')
+        					  .set('opacity',0)
+        					  .end();
+        					break;
+        				case 5:
+        					move('#ji_5')
+        					  .set('animation','')
+        					  .end();
+        					move('#section5 .yaoqiu')
+        					  .set('opacity',0)
+        					  .end();
+        					break;
+        				case 6:
+        					move('#ji_6')
+        					  .set('left','100%')
+        					  .end();
+        					break;
+        				default:
+        					break;
+        			}
+		    	},
+		    });
+		     $("#btn-xz").on('touchstart', function(){
+			 move('#detail_xz')
+			   .set('opacity',1)
+			   .set('top','-50%')
+			   .end();
+		  });
+		 $("#btn-cw").on('touchstart', function(){
+			 move('#detail_cw')
+			   .set('opacity',1)
+			   .set('top','-46%')
+			   .end();
+		  });
+		 $("#btn-yy").on('touchstart', function(){
+			 move('#detail_yy')
+			   .set('opacity',1)
+			   .set('top','-37%')
+			   .end();
+		  });
+		 $("#close-xz").on('touchstart', function(){
+			 move('#detail_xz')
+			   .set('opacity',0)
+			   .set('top','-120%')
+			   .end();
+		  });
+		 $("#close-cw").on('touchstart', function(){
+			 move('#detail_cw')
+			   .set('opacity',0)
+			   .set('top','-116%')
+			   .end();
+		  });
+		 $("#close-yy").on('touchstart', function(){
+			 move('#detail_yy')
+			   .set('opacity',0)
+			   .set('top','-107%')
+			   .end();
+		  });
+		});
+		
+	</script>
+</body>
+</html>

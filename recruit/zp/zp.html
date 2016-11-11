@@ -19,7 +19,7 @@
 		<div class="section" id="section2">
 			<div class="logoCon">
 				<img src="img/logo.png" alt="">
-				<h2>COLOR YOUR LIFE</h2>
+				<h2>年轻人的茶品牌</h2>
 			</div>
 			<div id="wrap2">
 				<div id="pz_introduction">
@@ -120,9 +120,7 @@
 		    		switch(index){
         				case 1:
         					move('#txt_1')
-        					  .set('opacity',1)
-							  .set('width','66%')
-							  .set('height','30%')
+        					  .set('animation','zhuiluo .6s forwards')
 							  .end(function(){
 							  	move('.pzTxt')
 							  	  .set('opacity',1)
@@ -138,41 +136,39 @@
         					  	  .set('opacity',1)
         					  	  .set('width','77%')
         					  	  .set('height','40%')
-        					  	  .end(function(){
-        					  	  	move('#pz_introduction p')
-        					  	  	  .set('margin-left',0)
-        					  	  	  .set('opacity',1)
-        					  	  	  .end();
-        					  	  });
+        					  	  .end();
         					  });
         					break;
         				case 3:
         					move('#ji_3')
         					  .set('left','29%')
-        					  .end(function(){
+        					  .end();
         					  	move('#section3 .yaoqiu')
         					  	  .set('opacity',1)
+        					  	  .set('animation','huangdong .4s')
         					  	  .end();
-        					  })
+        					  
         					break;
         				case 4:
         					$('#ji_4').css('opacity',1);
         					move('#ji_4')
         					  .set('top','11%')
-        					  .end(function(){
+        					  .end();
         					  	move('#section4 .yaoqiu')
         					  	  .set('opacity',1)
+        					  	  .set('animation','huangdong .4s')
         					  	  .end();
-        					  })
+        					  
         					break;
         				case 5:
         					move('#ji_5')
-        					  .set('animation','wobble 1s')
-        					  .end(function(){
+        					  .set('animation','wobble .6s')
+        					  .end();
         					  	move('#section5 .yaoqiu')
         					  	  .set('opacity',1)
+        					  	  .set('animation','huangdong .4s')
         					  	  .end();
-        					  })
+        					  
         					break;
         				case 6:
         					move('#ji_6')
@@ -186,28 +182,16 @@
 		    	onLeave: function(index, nextIndex){
 		    		switch(index){
         				case 1:
+        					$('#txt_1').css('animation','');
         					$('.pzTxt').css('opacity',0);
-        					$('#txt_1').css('opacity',0);
-        					move('#txt_1')
-							  .set('width','22%')
-							  .set('height','10%')
-							  .end();
-        					break;
         				case 2:
         					$('.logoCon').css('opacity',0);
         					move('.logoCon')
         					  .set('top','-20%')
         					  .end();
-        					move('#pz_introduction p')
-        					  .set('margin-left','-100%')
-        					  .set('opacity',0)
-        					  .end(function(){
-        					  	move('#wrap2')
-	        					  .set('opacity',0)
-	        					  .set('width','1%')
-	        					  .set('height','1%')
-	        					  .end();
-        					  });
+        					move('#wrap2')
+	        				  .set('opacity',0)
+	        				  .end();
         					break;
         				case 3:
         					move('#ji_3')
@@ -215,6 +199,7 @@
         					  .end();
         					move('#section3 .yaoqiu')
         					  .set('opacity',0)
+        					  .set('animation','')
         					  .end();
         					break;
         				case 4:
@@ -227,6 +212,7 @@
         					  })
         					move('#section4 .yaoqiu')
         					  .set('opacity',0)
+        					  .set('animation','')
         					  .end();
         					break;
         				case 5:
@@ -235,6 +221,7 @@
         					  .end();
         					move('#section5 .yaoqiu')
         					  .set('opacity',0)
+        					  .set('animation','')
         					  .end();
         					break;
         				case 6:

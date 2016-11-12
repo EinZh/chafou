@@ -121,6 +121,7 @@
         				case 1:
         					move('#txt_1')
         					  .set('animation','zhuiluo .6s forwards')
+        					  .set('-webkit-animation','zhuiluo .6s forwards')
 							  .end(function(){
 							  	move('.pzTxt')
 							  	  .set('opacity',1)
@@ -146,6 +147,9 @@
         					  	move('#section3 .yaoqiu')
         					  	  .set('opacity',1)
         					  	  .set('animation','huangdong .4s')
+        					  	  .set('-moz-animation','huangdong .4s')
+        					  	  .set('-webkit-animation','huangdong .4s')
+        					  	  .set('-o-animation','huangdong .4s')
         					  	  .end();
         					  
         					break;
@@ -157,16 +161,25 @@
         					  	move('#section4 .yaoqiu')
         					  	  .set('opacity',1)
         					  	  .set('animation','huangdong .4s')
+        					  	  .set('-moz-animation','huangdong .4s')
+        					  	  .set('-webkit-animation','huangdong .4s')
+        					  	  .set('-o-animation','huangdong .4s')
         					  	  .end();
         					  
         					break;
         				case 5:
         					move('#ji_5')
         					  .set('animation','wobble .6s')
+        					  .set('-moz-animation','wobble .6s')
+        					  .set('-webkit-animation','wobble .6s')
+        					  .set('-o-animation','wobble .6s')
         					  .end();
         					  	move('#section5 .yaoqiu')
         					  	  .set('opacity',1)
         					  	  .set('animation','huangdong .4s')
+        					  	  .set('-moz-animation','huangdong .4s')
+        					  	  .set('-webkit-animation','huangdong .4s')
+        					  	  .set('-o-animation','huangdong .4s')
         					  	  .end();
         					  
         					break;
@@ -182,7 +195,10 @@
 		    	onLeave: function(index, nextIndex){
 		    		switch(index){
         				case 1:
-        					$('#txt_1').css('animation','');
+        					$('#txt_1').css({
+        						'animation':'',
+        						'-webkit-animation':''
+        					});
         					$('.pzTxt').css('opacity',0);
         				case 2:
         					$('.logoCon').css('opacity',0);
@@ -197,10 +213,13 @@
         					move('#ji_3')
         					  .set('left','-51%')
         					  .end();
-        					move('#section3 .yaoqiu')
-        					  .set('opacity',0)
-        					  .set('animation','')
-        					  .end();
+        					$('#section3 .yaoqiu').css({
+        						'opacity':0,
+        						'animation':'',
+        						'-moz-animation':'',
+        						'-webkit-animation':'',
+        						'-o-animation':''
+        					});
         					break;
         				case 4:
         					move('#ji_4')
@@ -210,19 +229,28 @@
 	        					  .set('top','-50%')
 	        					  .end();
         					  })
-        					move('#section4 .yaoqiu')
-        					  .set('opacity',0)
-        					  .set('animation','')
-        					  .end();
+        					$('#section4 .yaoqiu').css({
+        						'opacity':0,
+        						'animation':'',
+        						'-moz-animation':'',
+        						'-webkit-animation':'',
+        						'-o-animation':''
+        					});
         					break;
         				case 5:
-        					move('#ji_5')
-        					  .set('animation','')
-        					  .end();
-        					move('#section5 .yaoqiu')
-        					  .set('opacity',0)
-        					  .set('animation','')
-        					  .end();
+        					$('#ji_5').css({
+        						'animation':'',
+        						'-moz-animation':'',
+        						'-webkit-animation':'',
+        						'-o-animation':''
+        					})
+        					$('#section5 .yaoqiu').css({
+        						'opacity':0,
+        						'animation':'',
+        						'-moz-animation':'',
+        						'-webkit-animation':'',
+        						'-o-animation':''
+        					});
         					break;
         				case 6:
         					move('#ji_6')

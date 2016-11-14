@@ -236,6 +236,7 @@
 }
 #showE li img{
   margin-top: 70px;
+  height: 70px;
 }
 #showE ul:after{
   content: '';

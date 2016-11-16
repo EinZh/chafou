@@ -11,10 +11,6 @@
 	<div id="fullpage">
 		<div class="section" id="section1">
 			<div id="txt_1"></div>
-			<div class="pzTxt">
-				<p>平仄</p>
-				<p style="margin-top: -3%">年轻人的茶叶品牌</p>
-			</div>
 		</div>
 		<div class="section" id="section2">
 			<div class="logoCon">
@@ -122,11 +118,7 @@
         					move('#txt_1')
         					  .set('animation','zhuiluo .4s forwards')
         					  .set('-webkit-animation','zhuiluo .4s forwards')
-							  .end(function(){
-							  	move('.pzTxt')
-							  	  .set('opacity',1)
-							  	  .end();
-							  });
+							  .end();
         					break;
         				case 2:
         					move('.logoCon')
@@ -199,7 +191,6 @@
         						'animation':'',
         						'-webkit-animation':''
         					});
-        					$('.pzTxt').css('opacity',0);
         				case 2:
         					$('.logoCon').css('opacity',0);
         					move('.logoCon')
